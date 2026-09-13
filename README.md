@@ -42,7 +42,6 @@ ToPNoise is currently intended for Linux systems based on Debian/Ubuntu on x86_6
 
 The individual ToPNoise modules are distributed as Singularity container images and are launched through the main ToPNoise graphical interface.
 
-```markdown
 ### 1. Download ToPNoise
 
 Download the repository from GitHub using **Code → Download ZIP**, then extract the archive.
