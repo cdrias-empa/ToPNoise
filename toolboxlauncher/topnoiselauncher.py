@@ -1,0 +1,131 @@
+#!/usr/bin/python
+from PyQt5.QtWidgets import QDialog, QApplication, QMainWindow, QMessageBox, QLabel, QPushButton
+from PyQt5.uic import loadUi
+import os
+import sys
+import shutil
+
+class LauncherGUI(QMainWindow):
+	def __init__(self):
+		# Initialize + load UI
+		super(LauncherGUI, self).__init__()
+		# Set the different path
+		self.filepath=os.path.dirname(os.path.abspath(__file__))
+		self.projectRoot = os.path.abspath(os.path.join(self.filepath, os.pardir))
+		self.imagesPath = os.path.join(self.projectRoot, 'images')
+		self.toolboxSif = os.path.join(self.imagesPath, 'MultiSleeperModel.sif') 
+		self.bemSif = os.path.join(self.imagesPath, 'topnoisebem.sif')
+		self.wheelSif = os.path.join(self.imagesPath, 'WheelToolbox.sif')
+		self.postprocessingSif = os.path.join(self.imagesPath, 'Postprocessing.sif')
+		uiFilePath=os.path.join(self.filepath,'topnoiselauncher.ui')
+		loadUi(uiFilePath, self)
+		self.srcpath=os.path.abspath(os.path.join(self.filepath, os.pardir))
+		self.termcmd="xterm -hold -e"
+		self.salome_path="/opt/SalomeMeca/appli_V2019_univ/salome"
+  
+         # Signals & slots
+		#self.PadStiffnessBtn.clicked.connect(self.RunPadStiffness)
+		#self.ThreeSleeperBtn.clicked.connect(self.RunThreeSleeper)
+		#self.ImpulseModelBtn.clicked.connect(self.RunImpulseModel)
+		self.MultiSleeperBtn.clicked.connect(self.RunMultiSleeperModel)
+		self.BEMBtn.clicked.connect(self.RunBEM)
+		self.WheelBtn.clicked.connect(self.RunWheel)
+		self.PostProcessingBtn.clicked.connect(self.RunPostProcessing)
+		#self.MultiSleeperPostproBtn.clicked.connect(self.RunMultiSleeperPostPro)
+		#self.SemiAnalyticalTrackBtn.clicked.connect(self.RunSemiAnalyticalTrack)
+		#self.SalomeBtn.clicked.connect(self.RunSalome)
+
+
+	#def RunPadStiffness(self):
+	#	"""Launch the PadStiffness model"""
+	#	exe=os.path.join(self.srcpath,'PadStiffnessModel/PadStiffnessGUI.sh')
+	#	cmd=self.termcmd + " " + exe + " &"		
+	#	os.system(cmd)
+
+	#def RunThreeSleeper(self):
+	#	"""Launch the ThreeSleeper model"""
+	#	exe=os.path.join(self.srcpath,'ThreeSleeperModel/ThreeSleeperModel/ThreeSleeperModelGUI.sh')
+	#	cmd=self.termcmd + " " + exe + " &"		
+	#	os.system(cmd)
+
+	#def RunImpulseModel(self):
+	#	"""Launch the Impulse model"""
+	#	exe=os.path.join(self.srcpath,'ImpulseModel/ImpulseModelGUI.sh')
+	#	cmd=self.termcmd + " " + exe + " &"		
+		#os.system(cmd)
+
+	def RunMultiSleeperModel(self):
+		"""Launch the MultiSleeper GUI inside MultiSleeperModel.sif"""
+		exe = "/opt/RailTrackModellingToolbox/src/MultiSleeperModel/MultiSleeperModel.sh"
+		cmd = (
+			self.termcmd
+			+ " singularity exec --writable-tmpfs --bind /mnt/results:/mnt/results "
+			+ self.toolboxSif
+			+ " "
+			+ exe
+			+ " &"
+		)
+		os.system(cmd)
+
+	def RunBEM(self):
+		"""Launch the BEM GUI inside topnoisebem.sif"""
+		exe = "/opt/BEM/GUI/app.py"
+		cmd = (
+			self.termcmd
+			+ " singularity exec --writable-tmpfs --bind /mnt/results:/mnt/results "
+			+ self.bemSif
+			+ " python3 "
+			+ exe
+			+ " &"
+		)
+		os.system(cmd)
+
+	def RunWheel(self):
+		"""Launch the Wheel GUI inside WheelToolbox.sif"""
+		exe = "/opt/WheelToolbox/DevFiles/App/main.py"
+		cmd = (
+			self.termcmd
+			+ " singularity exec --writable-tmpfs --bind /mnt/results:/mnt/results "
+			+ self.wheelSif
+			+ " python3 "
+			+ exe
+			+ " "
+			+ self.projectRoot
+			+ " &"
+		)
+		os.system(cmd)
+
+	def RunPostProcessing(self):
+		"""Launch the Postprocessing GUI inside Postprocessing.sif"""
+		cmd = (
+			self.termcmd
+			+ " singularity run --writable-tmpfs --bind /mnt/results:/mnt/results "
+			+ self.postprocessingSif
+			+ " &"
+		)
+		os.system(cmd)
+
+	#def RunMultiSleeperPostPro(self):
+	#	"""Launch the MultiSleeper Post-Processing GUI"""
+	#	exe=os.path.join(self.srcpath,'MultiSleeperModel/MultiSleeperModelPostPro.sh')
+	#	cmd=self.termcmd + " " + exe + " &"		
+	#	os.system(cmd)
+
+	#def RunSemiAnalyticalTrack(self):
+	#	"""Launch the SemiAnalyticalTrack model"""
+	#	exe=os.path.join(self.srcpath,'SemiAnalyticalTrackModel/SemiAnalyticalTrackGUI.sh')
+	#	cmd=self.termcmd + " " + exe + " &"		
+	#	os.system(cmd)
+
+	def RunSalome(self):
+		"""Launch the Salome FE Pre - Post"""
+		exe=self.salome_path
+		cmd=self.termcmd + " " + exe + " &"		
+		os.system(cmd)
+
+
+if __name__ == '__main__':
+	app = QApplication([]) #sys.argv
+	widget = LauncherGUI()
+	widget.show()
+	sys.exit(app.exec_())
