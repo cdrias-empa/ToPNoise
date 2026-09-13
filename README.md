@@ -47,3 +47,10 @@ The individual ToPNoise modules are distributed as Singularity container images 
 Download the repository from GitHub using **Code → Download ZIP**, then extract the archive.
 
 After extraction, open a terminal in the `ToPNoise` directory.
+
+### 2. Download the container images
+
+From the `ToPNoise` directory, run:
+
+```bash
+bash setup/download_images.sh
