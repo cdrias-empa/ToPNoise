@@ -42,8 +42,9 @@ ToPNoise is currently intended for Linux systems based on Debian/Ubuntu on x86_6
 
 The individual ToPNoise modules are distributed as Singularity container images and are launched through the main ToPNoise graphical interface.
 
-### 1. Clone the repository
+```markdown
+### 1. Download ToPNoise
 
-```bash
-git clone https://github.com/cdrias-empa/ToPNoise.git
-cd ToPNoise
+Download the repository from GitHub using **Code → Download ZIP**, then extract the archive.
+
+After extraction, open a terminal in the `ToPNoise` directory.
