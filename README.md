@@ -18,15 +18,13 @@ ToPNoise is organized into four main modules.
 
 The structural response of the track is calculated using the Multi-sleeper FE model from the [RailTrackModellingToolbox](https://github.com/jcugnoni-heig/RailTrackModellingToolbox).
 
-It is a large-scale 3D structural model of a railway track with an arbitrary number of sleepers. Frequency-dependent dynamic substructuring is used to efficiently evaluate the vibration response of the rail and sleepers in detail.
-
-The model also allows undersleeper pads to be included.
+It is a large-scale 3D structural model of a railway track with an arbitrary number of sleepers. It uses frequency-dependent dynamic substructuring efficiently evaluate the vibration response of the rail and sleepers in detail. 
 
 ### 2. Structural Response of the Wheels
 
-The structural response of the wheels is calculated using a finite-element model implemented with *Code_Aster*.
+The structural response of the wheels is calculated using a finite-element model implemented with *Code_Aster*. 
 
-The 3D model includes three types of wheelsets with their detailed geometries.
+The 3D model includes two types of wheelsets with their detailed geometries.
 
 ### 3. Noise Radiation
 
