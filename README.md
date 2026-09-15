@@ -10,6 +10,10 @@ ToPNoise provides a graphical user interface that brings together the structural
 
 ToPNoise is organized into four main modules.
 
+<p align="center">
+  <img src=".github/GUI_screenshot.png" alt="ToPNoise main GUI" width="900">
+</p>
+
 ### 1. Structural Response of the Track
 
 The structural response of the track is calculated using the Multi-sleeper FE model from the [RailTrackModellingToolbox](https://github.com/jcugnoni-heig/RailTrackModellingToolbox).
