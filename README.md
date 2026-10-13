@@ -56,6 +56,7 @@ From the `ToPNoise` directory, run:
 
 ```bash
 bash setup/download_images.sh
+```
 
 ## Funding & Acknowledgement
 
