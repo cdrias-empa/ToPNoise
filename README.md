@@ -60,5 +60,5 @@ bash setup/download_images.sh
 
 ## Funding & Acknowledgement
 
-This framework was developed in the "Tool for the prediction of railway noise and vibrations
+This framework was developed in the context of the "Tool for the prediction of railway noise and vibrations
 (ToP-Noise)" project funded by the Swiss Federal Office of Environment and developed in collaboration with EMPA, HEIG-VD and SBB.
