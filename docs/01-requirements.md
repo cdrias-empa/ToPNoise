@@ -19,6 +19,9 @@ uname -m
 
 At least **10 GB of free disk space** is required for the ToPNoise installation. Additional disk space is required for calculation results. Depending on the calculation, the results of a full study can require several gigabytes.
 
+> [!WARNING]
+> **TODO:** Give a rough estimate of the required space for a given standard case.
+
 ## 1.3 Computing power
 
 The ToPNoise calculations are computationally demanding and can take from minutes to hours. We recommend having at least **8 CPU cores** and **64 GB of RAM**. More computational power will reduce computation time.
