@@ -48,6 +48,7 @@ echo $DISPLAY
 
 **Expected result**: a value such as `:0`.
 
+> [!WARNING]
 > **TODO:** Remove the appendix on remote access until remote connection support is implemented and documented.
 
 ## 1.5 Programs that must be installed
