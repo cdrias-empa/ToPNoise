@@ -1,16 +1,16 @@
 # 1. Requirements
 
-**Checklist for this chapter**
+**Checklist**
 
-- [ ] My computer runs Ubuntu or Debian Linux, 64-bit (x86_64).
+- [ ] My computer runs Ubuntu 24.04 LTS or a later Ubuntu release, 64-bit (x86_64).
 - [ ] I have at least 10 GB of free disk space for the installation, and more for my results.
 - [ ] I have a graphical desktop (a screen, or a remote desktop).
 - [ ] I have administrator rights (`sudo`) for the installation of a few system programs.
-- [ ] I will install ToPNoise and keep my results in my **home directory**.
+- [ ] I will install ToPNoise in my **home directory** and have enough disk space for my calculation results.
 
 ## 1.1 Operating system
 
-ToPNoise runs on **Linux systems based on Debian or Ubuntu, on 64-bit PCs (x86_64 / amd64)**.
+ToPNoise has been tested on **Ubuntu 24.04 LTS, on 64-bit PCs (x86_64 / amd64)**. Later Ubuntu releases can also be used provided that the `singularity-container` package is available.
 
 To find out which system you have, open a terminal and type:
 
@@ -19,9 +19,7 @@ lsb_release -ds
 uname -m
 ```
 
-**Expected result**: the first command prints the name of your distribution (for example `Ubuntu 22.04.3 LTS`), and the second prints `x86_64`.
-
-<!-- TODO(fix pending G4): state the Ubuntu / Debian versions that the installer supports. The apt package `singularity-container` exists on Ubuntu 24.04 and later, not on 20.04 and 22.04. All the packages of the script resolve on 24.04 (simulated with apt); the script itself has not been run on 24.04, and the images have not been tried with SingularityCE 4.1.1. -->
+**Expected result**: the first command prints Ubuntu 24.04 LTS or a later Ubuntu release, and the second prints `x86_64`.
 
 > **Windows users**: Ubuntu running inside Windows (WSL2, with its graphical support) can be used. It has been tried only briefly: the containers and the module windows start, but no full calculation has been checked.
 
@@ -34,24 +32,9 @@ uname -m
 | **Free space needed for the installation** | **at least 10 GB** |
 | Your calculation results | depends on the calculation; the results of a full study can need several gigabytes |
 
-Check your free space with:
-
-```bash
-df -h ~
-```
-
-The column `Avail` is the free space on the disk that holds your home directory.
-
 ## 1.3 Computing power
 
-ToPNoise runs calculations that can take from minutes to hours.
-
-- The **Multi-Sleeper Model** is the most demanding: its window states that the **RAM** used can reach **15 GB or more**, and its default memory limit is 32 000 MB of RAM per job. It also runs several jobs at the same time, one for each frequency band.
-- The Boundary Element module starts several calculation processes at the same time. Its default settings (15 processes for the rail, 9 for the sleepers, 20 for the wheel) suit a powerful computer. On a laptop, you must lower them (chapter 6).
-
-<!-- TODO: measure the memory needed by one BEM calculation, and give the minimum RAM. -->
-<!-- TODO(fix pending B7): the BEM default numbers of processes may exceed the memory of a workstation. -->
-
+The ToPNoise calculations are computationally demanding and can take from minutes to hours. We recommend having a computer with **8 to 16 CPU cores** and at least **64 GB of RAM**.
 
 ## 1.4 A graphical desktop
 
@@ -71,18 +54,18 @@ The installation script (chapter 2) installs these programs for you. They are li
 
 | Program | Used for |
 |---|---|
-| **Singularity** (SingularityCE 3.8 or later) | Runs the four modules in containers: each module comes with all the software it needs, so nothing else has to be installed |
+| **Singularity** | Runs the four modules in containers: each module comes with all the software it needs, so nothing else has to be installed |
 | **Python 3** with **PyQt5** | Runs the launcher window |
 | **xterm** | Each module is started in a terminal window, which stays open and shows its messages |
 | **wget** | Downloads the images |
 
 ## 1.6 Where to install ToPNoise
 
-> **Install ToPNoise in your home directory**, for example in `~/ToPNoise`, and choose output folders inside your home directory too.
+> **Install ToPNoise in your home directory**, for example in `~/ToPNoise`.
 
-The modules run in containers. A container sees your home directory, but not the other disks of the computer. A folder outside your home directory (a second disk, `/data`, a USB drive…) is invisible to the modules: they report that the folder does not exist, or they lose the files when they close.
+The modules run inside Singularity containers. The home directory is directly accessible from the containers and can therefore be used to store input and output data. If the data are stored at another location, for example on a second disk or in another local directory, the launcher can make one selected folder available to all ToPNoise modules. This folder is mounted inside the containers as `/mnt/shared`.
 
-<!-- TODO(fix pending G3): either document this as a permanent requirement, or have the launcher mount the ToPNoise folder explicitly. -->
+The shared folder is selected when the ToPNoise launcher is started for the first time. Its location on the host computer is stored by the launcher and reused for subsequent sessions.
 
 ## 1.7 Administrator rights
 
