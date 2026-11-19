@@ -10,7 +10,7 @@
 
 ## 1.1 Operating system
 
-ToPNoise has been tested on **Ubuntu 24.04 LTS, on 64-bit PCs (x86_64 / amd64)**. Later Ubuntu releases can also be used provided that the `singularity-container` package is available.
+ToPNoise has been tested on **Ubuntu 24.04 LTS, on 64-bit PCs (x86_64 / amd64)**. The same installation procedure can be used on later Ubuntu releases provided that the `singularity-container` package is available.
 
 To find out which system you have, open a terminal and type:
 
@@ -19,7 +19,7 @@ lsb_release -ds
 uname -m
 ```
 
-**Expected result**: the first command prints Ubuntu 24.04 LTS or a later Ubuntu release, and the second prints `x86_64`.
+**Expected result**: the first command prints Ubuntu 24.04 LTS, a 24.04 point release, or a later Ubuntu release, and the second prints `x86_64`.
 
 > **Windows users**: Ubuntu running inside Windows (WSL2, with its graphical support) can be used. It has been tried only briefly: the containers and the module windows start, but no full calculation has been checked.
 
@@ -54,7 +54,7 @@ The installation script (chapter 2) installs these programs for you. They are li
 
 | Program | Used for |
 |---|---|
-| **Singularity** | Runs the four modules in containers: each module comes with all the software it needs, so nothing else has to be installed |
+| **Singularity** | Runs the four modules in containers, which include the software dependencies required by each module |
 | **Python 3** with **PyQt5** | Runs the launcher window |
 | **xterm** | Each module is started in a terminal window, which stays open and shows its messages |
 | **wget** | Downloads the images |
@@ -64,8 +64,6 @@ The installation script (chapter 2) installs these programs for you. They are li
 > **Install ToPNoise in your home directory**, for example in `~/ToPNoise`.
 
 The modules run inside Singularity containers. The home directory is directly accessible from the containers and can therefore be used to store input and output data. If the data are stored at another location, for example on a second disk or in another local directory, the launcher can make one selected folder available to all ToPNoise modules. This folder is mounted inside the containers as `/mnt/shared`.
-
-The shared folder is selected when the ToPNoise launcher is started for the first time. Its location on the host computer is stored by the launcher and reused for subsequent sessions.
 
 ## 1.7 Administrator rights
 
