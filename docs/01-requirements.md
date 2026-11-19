@@ -36,17 +36,19 @@ uname -m
 
 The ToPNoise calculations are computationally demanding and can take from minutes to hours. We recommend having at least **8 CPU cores** and **64 GB of RAM**. More computational power will obviously reduce computation time.
 
-## 1.4 A graphical desktop
+## 1.4 Display
 
-The four modules are graphical applications, so the computer needs a desktop with a screen. The launcher uses the X11 display system. On a modern Linux desktop that uses Wayland, X11 programs work through the compatibility layer called XWayland, which is normally installed.
+The ToPNoise launcher and the four modules use graphical interfaces and therefore require access to a display.
 
-To check that your session has a display, type:
+To check that a display is available, type:
 
 ```bash
 echo $DISPLAY
 ```
 
-**Expected result**: a short text such as `:0`. If the line is empty, your terminal has no access to a display; use a terminal opened from the desktop, or see the [appendix on remote access](appendix-remote.md).
+**Expected result**: a value such as `:0`.
+
+<!-- TODO: remove the appendix on remote access until remote connection support is implemented and documented. -->
 
 ## 1.5 Programs that must be installed
 
