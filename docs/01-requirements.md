@@ -32,6 +32,9 @@ uname -m
 | Free space needed for the installation | at least 10 GB |
 | Your calculation results | depends on the calculation; the results of a full study can need several gigabytes |
 
+> [!WARNING]
+> **TODO:** Give a rough estimation of how much space is needed for a given standard case.
+
 ## 1.3 Computing power
 
 The ToPNoise calculations are computationally demanding and can take from minutes to hours. We recommend having at least **8 CPU cores** and **64 GB of RAM**. More computational power will obviously reduce computation time.
