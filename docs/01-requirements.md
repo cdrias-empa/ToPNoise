@@ -29,7 +29,7 @@ uname -m
 |---|---|
 | The four container images | about 6.9 GB |
 | Extra space needed while the images are downloaded | about 2.6 GB |
-| **Free space needed for the installation** | **at least 10 GB** |
+| Free space needed for the installation | **at least 10 GB** |
 | Your calculation results | depends on the calculation; the results of a full study can need several gigabytes |
 
 ## 1.3 Computing power
