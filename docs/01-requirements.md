@@ -34,7 +34,7 @@ uname -m
 
 ## 1.3 Computing power
 
-The ToPNoise calculations are computationally demanding and can take from minutes to hours. We recommend having a computer with **8 to 16 CPU cores** and at least **64 GB of RAM**.
+The ToPNoise calculations are computationally demanding and can take from minutes to hours. We recommend having at least **8 CPU cores** and **64 GB of RAM**. More computational power will obviously reduce computation time.
 
 ## 1.4 A graphical desktop
 
