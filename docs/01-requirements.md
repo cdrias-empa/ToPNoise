@@ -1,12 +1,12 @@
 # 1. Requirements
 
-**Checklist**
+**Make sure that:**
 
-- [ ] My computer runs Ubuntu 24.04 LTS or a later Ubuntu release, 64-bit (x86_64).
-- [ ] I have at least 10 GB of free disk space for the installation, and more for my results.
-- [ ] I have a graphical desktop (a screen, or a remote desktop).
-- [ ] I have administrator rights (`sudo`) for the installation of a few system programs.
-- [ ] I will install ToPNoise in my **home directory** and have enough disk space for my calculation results.
+- your computer runs Ubuntu 24.04 LTS or a later Ubuntu release, 64-bit (x86_64);
+- you have at least 10 GB of free disk space for the installation, and additional space for calculation results;
+- you have a graphical desktop;
+- you have administrator rights (`sudo`);
+- ToPNoise is installed in your home directory.
 
 ## 1.1 Operating system
 
