@@ -61,7 +61,7 @@ The installation script (chapter 2) installs these programs for you. They are li
 
 ## 1.6 Where to install ToPNoise
 
-> **Install ToPNoise in your home directory**, for example in `~/ToPNoise`.
+> **Install the ToPNoise folder inside your Linux home directory**
 
 The modules run inside Singularity containers. The home directory is directly accessible from the containers and can therefore be used to store input and output data. If the data are stored at another location, for example on a second disk or in another local directory, the launcher can make one selected folder available to all ToPNoise modules. This folder is mounted inside the containers as `/mnt/shared`.
 
