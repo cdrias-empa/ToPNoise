@@ -118,42 +118,37 @@ Set the minimum and maximum frequencies of the calculated frequency response. Th
 
 For a simulation called `wheel_study`, with all three force positions selected, the output folder has the following structure:
 
-```text
-wheel_study/
-├── Modes/
-│   ├── base_modes/
-│   ├── fn.txt
-│   ├── modes.med
-│   └── parameters.json
-│
-├── nominal/
-│   ├── parameters.json
-│   ├── nodeCoordinates_FE.txt
-│   ├── nodeCoordinates.txt
-│   ├── vertical/
-│   │   ├── Inputs/
-│   │   ├── Outputs/
-│   │   │   ├── FRFcontact_vert.txt
-│   │   │   ├── FRF_vert.txt
-│   │   │   └── nodeCoordinates_FE.txt
-│   │   └── Messages/
-│   └── lateral/
-│       ├── Inputs/
-│       ├── Outputs/
-│       │   ├── FRFcontact_lat.txt
-│       │   ├── FRF_lat.txt
-│       │   └── nodeCoordinates_FE.txt
-│       └── Messages/
-│
-├── offsetIN/
-│   ├── vertical/
-│   └── lateral/
-│
-└── offsetOUT/
-    ├── vertical/
-    └── lateral/
-```
-
+- `wheel_study/`
+  - `Modes/`
+    - `base_modes/`
+    - `fn.txt`
+    - `modes.med`
+    - `parameters.json`
+  - `nominal/`
+    - `parameters.json`
+    - `nodeCoordinates_FE.txt`
+    - `nodeCoordinates.txt`
+    - `vertical/`
+      - `Inputs/`
+      - `Outputs/`
+        - `FRFcontact_vert.txt`
+        - `FRF_vert.txt`
+        - `nodeCoordinates.txt`
+        - `nodeCoordinates_FE.txt`
+      - `Messages/`
+    - `lateral/`
+      - `Inputs/`
+      - `Outputs/`
+        - `FRFcontact_lat.txt`
+        - `FRF_lat.txt`
+        - `nodeCoordinates.txt`
+        - `nodeCoordinates_FE.txt`
+      - `Messages/`
+  - `offsetIN/`
+    - same structure as `nominal/`
+  - `offsetOUT/`
+    - same structure as `nominal/`
+  
 The `Modes` folder is created only when the modal basis is calculated. It contains the natural frequencies and the modal basis used for the frequency-response calculation.
 
 A separate folder is created for each selected force position: `nominal`, `offsetIN` and `offsetOUT`. Each case contains the responses to **vertical** and **lateral** excitation.
