@@ -36,12 +36,6 @@ The script creates the `images` folder and downloads the container images from t
 
 The Boundary Element image is distributed in two parts. The script downloads both parts, joins them automatically into `topnoisebem.sif`, and removes the temporary files afterwards.
 
-**Expected result**: the script finishes with:
-
-```text
-ToPNoise container images downloaded successfully.
-```
-
 The `images` folder should contain:
 
 ```text
