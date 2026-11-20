@@ -10,7 +10,7 @@ bash run.sh
 
 When ToPNoise is launched for the first time, you are asked to select a folder to share with the ToPNoise modules.
 
-![Select local folder](03-01-shared-folder.png)
+![Select local folder](images/03-01-shared-folder.png)
 
 The selected folder is accessible inside the ToPNoise containers as:
 
