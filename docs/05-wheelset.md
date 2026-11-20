@@ -34,7 +34,7 @@ The results are stored in a folder with this name inside the selected output fol
 
 ### Output folder
 
-Select the folder where the simulation results will be stored. The folder must already exist.
+Select the folder where the simulation results will be stored.
 
 ### Compute modes
 
