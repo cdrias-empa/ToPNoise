@@ -137,34 +137,39 @@ When **Compute modes** is selected, the modal basis is calculated for the first 
 
 ## 5.5 Results
 
-For a simulation called `wheel_study`, the results are stored under:
+For a simulation called `wheel_study`, one folder is created for each selected wheel–rail contact position. The responses to the vertical and lateral unit forces are stored separately.
 
 | Path | Content |
 |---|---|
-| `wheel_study/Modes/` | Modal basis and natural frequencies |
+| `wheel_study/Modes/` | Modal basis of the wheelset |
 | `wheel_study/nominal/` | Results for the nominal contact position |
-| `wheel_study/offsetIN/` | Results for the inward offset position |
-| `wheel_study/offsetOUT/` | Results for the outward offset position |
-| `<contact case>/vertical/Outputs/` | Response to vertical excitation |
-| `<contact case>/lateral/Outputs/` | Response to lateral excitation |
-| `<contact case>/vertical/Messages/` | Code_Aster messages for the vertical calculation |
-| `<contact case>/lateral/Messages/` | Code_Aster messages for the lateral calculation |
+| `wheel_study/offsetIN/` | Results for the inward contact position |
+| `wheel_study/offsetOUT/` | Results for the outward contact position |
+| `<contact position>/vertical/Outputs/` | Response to the vertical unit force |
+| `<contact position>/lateral/Outputs/` | Response to the lateral unit force |
 
-The main result files are:
+The main result files for each contact position are:
 
 | File | Content |
 |---|---|
-| `FRFcontact_vert.txt` | Driving-point response for vertical excitation |
-| `FRFcontact_lat.txt` | Driving-point response for lateral excitation |
-| `FRF_vert.txt` | Wheel-surface response for vertical excitation |
-| `FRF_lat.txt` | Wheel-surface response for lateral excitation |
-| `FRF_vert.med` | Wheel-surface response for visualization |
-| `FRF_lat.med` | Wheel-surface response for visualization |
-  
-The `Modes` folder is created only when the modal basis is calculated. It contains the natural frequencies and the modal basis used for the frequency-response calculation.
+| `vertical/Outputs/FRFcontact_vert.txt` | Driving-point FRFs for the vertical excitation |
+| `lateral/Outputs/FRFcontact_lat.txt` | Driving-point FRFs for the lateral excitation |
+| `vertical/Outputs/FRF_vert.txt` | Vibration field over the wheel surface for the vertical excitation |
+| `lateral/Outputs/FRF_lat.txt` | Vibration field over the wheel surface for the lateral excitation |
+| `parameters.json` | Parameters of the simulation |
 
-A separate folder is created for each selected force position: `nominal`, `offsetIN` and `offsetOUT`. Each case contains the responses to **vertical** and **lateral** excitation.
+The files `FRF_vert.txt` and `FRF_lat.txt` are generated when **Export displacement field for BEM** is selected and are used as input for the Boundary Element calculation.
 
-`FRFcontact_vert.txt` and `FRFcontact_lat.txt` contain the driving-point frequency responses at the wheel–rail contact position.
+If **Write MED** is also selected, the vibration fields are additionally exported as:
 
-If **Export displacement field for BEM** is selected, `FRF_vert.txt` and `FRF_lat.txt` contain the response over the wheel surface. If **Write MED** is also selected, the corresponding response is additionally written as `FRF_vert.med` and `FRF_lat.med` for visualization of the wheel surface vibration.
+- `vertical/Outputs/FRF_vert.med`
+- `lateral/Outputs/FRF_lat.med`
+
+The `Modes` folder contains:
+
+- `fn.txt`: natural frequencies of the wheelset;
+- `modes.med`: calculated mode shapes in MED format;
+- `base_modes/`: modal basis used for the harmonic calculation;
+- `parameters.json`: parameters used for the modal calculation.
+
+The `Modes` folder is created only when **Compute modes** is selected. When an existing modal basis is used, the selected external `Modes` folder is reused.
