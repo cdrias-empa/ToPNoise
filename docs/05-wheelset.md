@@ -44,6 +44,4 @@ If **Compute modes** is not selected, an existing `Modes` folder must be provide
 
 ### Write MED
 
-Select **Write MED** to additionally export the wheel response as MED files.
-
-This option is used when the wheel-surface response is exported for the acoustic calculation.
+Select **Write MED** to additionally export the wheel response as MED files for visualization of the wheel surface vibration.
