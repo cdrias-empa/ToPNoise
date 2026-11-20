@@ -171,5 +171,3 @@ The `Modes` folder contains:
 - `modes.med`: calculated mode shapes in MED format;
 - `base_modes/`: modal basis used for the harmonic calculation;
 - `parameters.json`: parameters used for the modal calculation.
-
-The `Modes` folder is created only when **Compute modes** is selected. When an existing modal basis is used, the selected external `Modes` folder is reused.
