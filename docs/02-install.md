@@ -46,4 +46,4 @@ images/
 └── Postprocessing.sif
 ```
 
-If the installation completes without errors, continue to [chapter 3](03-first-launch.md) to start ToPNoise for the first time.
+If the installation completes without errors, continue to [chapter 3](03-first-launch.md) to launch the Graphical User Interface.
