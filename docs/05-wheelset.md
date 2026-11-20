@@ -82,7 +82,7 @@ If an existing `Modes` folder is used, the wheel geometry and material propertie
 **2 — Export displacement field for BEM**  
 Select this option to export the response over the wheel surface for the subsequent Boundary Elements calculation. If it is not selected, only the driving-point FRFs at the selected contact positions are calculated.
 
-The wheel surface response is exported on a dedicated **projection mesh**, which is used as the interface between the finite-Elements wheel model and the Boundary Elements model. The corresponding projection mesh is provided automatically for each predefined wheelset.
+The wheel surface response calculated for the full wheelset is projected on a single wheel. The **projection meshs* are provided automatically for each predefined wheelset.
 
 <p align="center">
   <img src="images/05-05-wheelset-projection-mesh-small.png" alt="Wheelset 1 (small)" width="48%">
