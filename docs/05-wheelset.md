@@ -13,7 +13,7 @@ The Wheelset FE module calculates the frequency response of a 3D railway wheelse
 The calculation is carried out in two main steps:
 
 1. calculation or reuse of the wheelset vibration modes;
-2. calculation of the harmonic response for predefined wheel–rail contact positions.
+2. calculation of the harmonic response of the wheelset using modal superposition.
 
 The graphical interface is divided into three tabs:
 
