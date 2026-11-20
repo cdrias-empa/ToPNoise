@@ -51,7 +51,7 @@ If **Compute modes** is not selected, select an existing `Modes` folder. This al
 
 The **Modes and properties** tab defines the wheelset geometry, material properties and the settings used for the frequency response.
 
-![Wheelset FE — Modes and properties tab](images/05-02-wheelset-modes-properties.png)
+![Wheelset FE — Modes and properties tab](images/05-02-wheelset-modes.png)
 
 **1 — Wheel geometry**  
 Select one of the predefined wheelsets or **Custom** to use your own model. For a custom wheelset, select the FE wheel mesh and the corresponding projection mesh.
