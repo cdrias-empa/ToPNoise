@@ -113,3 +113,51 @@ A separate simulation is added to the queue for each selected force position.
 
 **7 — Frequency range**  
 Set the minimum and maximum frequencies of the calculated frequency response. The modal basis is calculated to **1.5 times the maximum frequency** including the rigid-body motion.
+
+## 5.5 Results
+
+For a simulation called `wheel_study`, with all three force positions selected, the output folder has the following structure:
+
+```text
+wheel_study/
+├── Modes/
+│   ├── base_modes/
+│   ├── fn.txt
+│   ├── modes.med
+│   └── parameters.json
+│
+├── nominal/
+│   ├── parameters.json
+│   ├── nodeCoordinates_FE.txt
+│   ├── nodeCoordinates.txt
+│   ├── vertical/
+│   │   ├── Inputs/
+│   │   ├── Outputs/
+│   │   │   ├── FRFcontact_vert.txt
+│   │   │   ├── FRF_vert.txt
+│   │   │   └── nodeCoordinates_FE.txt
+│   │   └── Messages/
+│   └── lateral/
+│       ├── Inputs/
+│       ├── Outputs/
+│       │   ├── FRFcontact_lat.txt
+│       │   ├── FRF_lat.txt
+│       │   └── nodeCoordinates_FE.txt
+│       └── Messages/
+│
+├── offsetIN/
+│   ├── vertical/
+│   └── lateral/
+│
+└── offsetOUT/
+    ├── vertical/
+    └── lateral/
+```
+
+The `Modes` folder is created only when the modal basis is calculated. It contains the natural frequencies and the modal basis used for the frequency-response calculation.
+
+A separate folder is created for each selected force position: `nominal`, `offsetIN` and `offsetOUT`. Each case contains the responses to **vertical** and **lateral** excitation.
+
+`FRFcontact_vert.txt` and `FRFcontact_lat.txt` contain the driving-point frequency responses at the wheel–rail contact position.
+
+If **Export displacement field for BEM** is selected, `FRF_vert.txt` and `FRF_lat.txt` contain the response over the wheel surface. If **Write MED** is also selected, the corresponding response is additionally written as `FRF_vert.med` and `FRF_lat.med` for visualization of the wheel surface vibration.
