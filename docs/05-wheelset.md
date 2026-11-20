@@ -3,7 +3,7 @@
 The Wheelset FE module calculates the frequency response of a 3D railway wheelset under a **unit force applied separately in the vertical and lateral directions** at the wheel–rail contact. The main outputs are:
 
 - **Driving-point FRFs** at the wheel–rail contact, used to calculate the wheel–rail interaction;
-- **Vibration field over the wheel surface**, used to calculate the acoustic radiation with the Boundary Element Method.
+- **Vibration field over the wheel surface**, used to calculate the acoustic radiation with the Boundary Elements Method.
 
 ### Assumptions
 
@@ -80,9 +80,9 @@ If an existing `Modes` folder is used, the wheel geometry and material propertie
 > Using a **Custom** wheelset is an advanced option. Contact the developers for further information on how to prepare and configure a custom model.
 
 **2 — Export displacement field for BEM**  
-Select this option to export the response over the wheel surface for the subsequent Boundary Element calculation. If it is not selected, only the driving-point FRFs at the selected contact positions are calculated.
+Select this option to export the response over the wheel surface for the subsequent Boundary Elements calculation. If it is not selected, only the driving-point FRFs at the selected contact positions are calculated.
 
-The wheel surface response is exported on a dedicated **projection mesh**, which is used as the interface between the finite-element wheel model and the Boundary Element model. The corresponding projection mesh is provided automatically for each predefined wheelset.
+The wheel surface response is exported on a dedicated **projection mesh**, which is used as the interface between the finite-Elements wheel model and the Boundary Elements model. The corresponding projection mesh is provided automatically for each predefined wheelset.
 
 <p align="center">
   <img src="images/05-05-wheelset-projection-mesh-small.png" alt="Wheelset 1 (small)" width="48%">
@@ -158,7 +158,7 @@ The main result files for each contact position are:
 | `lateral/Outputs/FRF_lat.txt` | Vibration field over the wheel surface for the lateral excitation |
 | `parameters.json` | Parameters of the simulation |
 
-The files `FRF_vert.txt` and `FRF_lat.txt` are generated when **Export displacement field for BEM** is selected and are used as input for the Boundary Element calculation.
+The files `FRF_vert.txt` and `FRF_lat.txt` are generated when **Export displacement field for BEM** is selected and are used as input for the Boundary Elements calculation.
 
 If **Write MED** is also selected, the vibration fields are additionally exported as:
 
