@@ -59,6 +59,21 @@ Two predefined railway passenger wheels are available:
 - **Wheelset 1 (small)**: wheel diameter **750 mm**;
 - **Wheelset 2 (large)**: wheel diameter **920 mm**.
 
+The two predefined wheelset geometries are shown below.
+
+<table>
+<tr>
+<td align="center" width="50%">
+<img src="images/05-03-wheelset-geometry-small.png" alt="Wheelset 1 (small)" width="100%">
+<br><b>Wheelset 1 (small)</b>
+</td>
+<td align="center" width="50%">
+<img src="images/05-03-wheelset-geometry-large.png" alt="Wheelset 2 (large)" width="100%">
+<br><b>Wheelset 2 (large)</b>
+</td>
+</tr>
+</table>
+
 Select **Custom** to use your own wheelset model. For a custom wheelset, select the FE wheel mesh and the corresponding projection mesh.
 
 If an existing `Modes` folder is used, the wheel geometry and material properties are taken from the previous modal calculation and cannot be changed.
