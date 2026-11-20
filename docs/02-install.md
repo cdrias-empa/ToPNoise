@@ -1,3 +1,21 @@
+# 2. Installation
+
+## 2.1 Download ToPNoise
+
+Open the ToPNoise repository on GitHub, click **Code**, and select **Download ZIP**.
+
+Extract the downloaded ZIP file somewhere inside your Linux home directory.
+
+The extracted folder is initially called `ToPNoise-main`. Rename it to `ToPNoise`.
+
+Open a terminal and move to the folder where you extracted ToPNoise:
+
+```bash
+cd /path/to/ToPNoise
+```
+
+All commands in the following section are run from the ToPNoise folder.
+
 ## 2.2 Install ToPNoise
 
 Run the installation script:
@@ -41,4 +59,3 @@ images/
 ```
 
 If the installation completes without errors, continue to [chapter 3](03-first-launch.md) to start ToPNoise for the first time.
-````
