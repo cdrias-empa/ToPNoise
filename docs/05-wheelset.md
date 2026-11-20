@@ -135,8 +135,6 @@ Remove the selected simulations from the queue.
 
 When **Compute modes** is selected, the modal basis is calculated for the first contact position and reused for the remaining contact positions.
 
-If an output folder for one of the selected contact positions already exists, the user is asked whether it should be overwritten.
-
 ## 5.5 Results
 
 For a simulation called `wheel_study`, the results are stored under:
