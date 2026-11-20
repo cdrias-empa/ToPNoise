@@ -36,12 +36,13 @@ The results are stored in a folder with this name inside the selected output fol
 
 Select the folder where the simulation results will be stored.
 
-**3 — Compute modes**  
+**3 — Write MED**  
+
+Select **Write MED** to additionally export the wheel response as MED files for visualization of the wheel surface vibration.
+
+**4 — Compute modes**  
 
 If **Compute modes** is selected, the wheelset modes are calculated.
 
-If **Compute modes** is not selected, an existing `Modes` folder must be provided. This allows previously calculated modes to be reused without repeating the modal calculation.
-
-**4 — Write MED**  
-
-Select **Write MED** to additionally export the wheel response as MED files for visualization of the wheel surface vibration.
+**5 — Existing modes folder**  
+If **Compute modes** is not selected, select an existing `Modes` folder. This allows previously calculated modes to be reused without repeating the modal calculation.
