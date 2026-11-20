@@ -1,9 +1,9 @@
 ## 5.1 Overview
 
-The Wheelset FE module calculates the frequency response of a 3D railway wheelset under a **unit force applied separately in the vertical and lateral directions** at the wheel–rail contact.
+The Wheelset FE module calculates the frequency response of a 3D railway wheelset under a **unit force applied separately in the vertical and lateral directions** at the wheel–rail contact. The main outputs are:
 
-The main outputs are the **driving-point FRFs** at the wheel–rail contact and the **vibration field** over the wheel surface for the Boundary Element calculation.
-
+- **Driving-point FRFs** at the wheel–rail contact, used to calculate the wheel–rail interaction;
+- **Vibration field over the wheel surface**, used to calculate the acoustic radiation with the Boundary Element Method.
 
 ### Assumptions
 
