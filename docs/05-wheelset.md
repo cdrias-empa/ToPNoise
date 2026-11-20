@@ -58,6 +58,9 @@ Select one of the predefined wheelsets or **Custom** to use your own model. For 
 
 If an existing `Modes` folder is used, the wheel geometry and material properties are taken from the previous modal calculation and cannot be changed.
 
+> [!NOTE]
+> Using a **Custom** wheelset is an advanced option. Contact the developers for further information on how to prepare and configure a custom model.
+
 **2 — Export displacement field for BEM**  
 Select this option to calculate and export the response over the wheel surface for the subsequent Boundary Element calculation. If it is not selected, only the driving-point FRFs at the selected contact positions are calculated.
 
