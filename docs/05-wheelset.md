@@ -145,8 +145,8 @@ For a simulation called `wheel_study`, one folder is created for each selected w
 | `wheel_study/nominal/` | Results for the nominal contact position |
 | `wheel_study/offsetIN/` | Results for the inward contact position |
 | `wheel_study/offsetOUT/` | Results for the outward contact position |
-| `<contact position>/vertical/Outputs/` | Response to the vertical unit force |
-| `<contact position>/lateral/Outputs/` | Response to the lateral unit force |
+| `<contact position>/vertical/Outputs/` | Vertical harmonic-response results |
+| `<contact position>/lateral/Outputs/` | Lateral harmonic-response results |
 
 The main result files for each contact position are:
 
