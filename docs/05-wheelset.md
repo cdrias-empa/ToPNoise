@@ -79,6 +79,15 @@ If an existing `Modes` folder is used, the wheel geometry and material propertie
 **2 — Export displacement field for BEM**  
 Select this option to export the response over the wheel surface for the subsequent Boundary Element calculation. If it is not selected, only the driving-point FRFs at the selected contact positions are calculated.
 
+<p align="center">
+  <img src="images/05-05-wheelset-projection-mesh-small.png" alt="Wheelset 1 (small)" width="48%">
+  <img src="images/05-06-wheelset-projection-mesh-large.png" alt="Wheelset 2 (large)" width="48%">
+</p>
+
+<p align="center">
+  <b>Projection meshes: Wheelset 1 (small), left; Wheelset 2 (large, right.</b>
+</p>
+
 **3 — FRF type**  
 Select whether the frequency response is calculated as **Displacement**, **Velocity** or **Acceleration**.
 
