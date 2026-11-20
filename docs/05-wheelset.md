@@ -18,8 +18,6 @@ The graphical interface is divided into three tabs:
 - **Modes and properties**
 - **Execution**
 
-The following sections describe these tabs.
-
 ## 5.2 General
 
 The **General** tab defines the simulation name, the output location, and whether the wheelset modes are calculated or reused from a previous simulation.
