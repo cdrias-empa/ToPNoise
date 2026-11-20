@@ -33,7 +33,7 @@ The launcher provides access to the four ToPNoise modules:
 | **Multi-Sleeper Model** | Track vibration | [4](04-track.md) |
 | **Wheelset FE** | Wheelset vibration | [5](05-wheelset.md) |
 | **Boundary Element** | Sound radiation | [6](06-bem.md) |
-| **Post-processing** | Contact forces, rolling noise and pass-by noise | [7](07-postprocessing.md) |
+| **Post-processing** | Contact forces, rolling noise and pass-by levels | [7](07-postprocessing.md) |
 
 Clicking a module opens a terminal window followed by the graphical interface of the selected module.
 
