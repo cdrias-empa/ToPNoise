@@ -28,12 +28,6 @@ bash setup/install_singularity_linux.sh
 
 The script uses `sudo` to install the required system packages and may therefore ask for your password.
 
-**Expected result**: the installation finishes with:
-
-```text
-Installation of singularity completed
-```
-
 ## 2.3 Download the container images
 
 The four ToPNoise modules are distributed as Singularity container images (`.sif`). These images contain the dependencies required by each module and are not included in the ToPNoise source code.
