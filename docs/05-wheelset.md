@@ -63,6 +63,12 @@ Two predefined railway passenger wheels are available. Their geometries are show
   <b>Wheelset 1 (small) - diameter 750 mm, left; Wheelset 2 (large) - diameter 920 mm, right.</b>
 </p>
 
+The reference coordinate system used for the wheelset is:
+
+- **X**: longitudinal direction (direction of travel);
+- **Y**: vertical/radial direction;
+- **Z**: lateral/axial direction.
+
 Select **Custom** to use your own wheelset model. For a custom wheelset, select the FE wheel mesh and the corresponding projection mesh.
 
 If an existing `Modes` folder is used, the wheel geometry and material properties are taken from the previous modal calculation and cannot be changed.
