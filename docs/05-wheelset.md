@@ -80,9 +80,9 @@ If an existing `Modes` folder is used, the wheel geometry and material propertie
 > Using a **Custom** wheelset is an advanced option. Contact the developers for further information on how to prepare and configure a custom model.
 
 **2 — Export displacement field for BEM**  
-Select this option to export the vibration response over the wheel surface for the subsequent Boundary Elements calculation. If it is not selected, only the driving-point FRFs at the selected contact positions are calculated.
+Select this option to export the vibration response over the wheel surface for the subsequent Boundary Element calculation. If it is not selected, only the driving-point FRFs at the selected contact positions are calculated.
 
-The structural response is calculated for the full wheelset. The resulting vibration field on the wheelset surface is projected on a **single wheel** only. The **projection meshes* are provided automatically for each predefined wheelset.
+The structural response is calculated for the full wheelset. The resulting vibration field on the wheelset surface is projected on a **single wheel** only. The **projection mesh** is provided automatically for each predefined wheelset.
 
 <p align="center">
   <img src="images/05-05-wheelset-projection-mesh-small.png" alt="Wheelset 1 (small)" width="48%">
