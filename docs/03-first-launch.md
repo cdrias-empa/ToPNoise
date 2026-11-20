@@ -22,7 +22,7 @@ The selected folder is saved and used again the next time ToPNoise is launched.
 
 The ToPNoise launcher then opens:
 
-![The ToPNoise launcher](images/03-01-launcher.png)
+![The ToPNoise launcher](images/03-02-launcher.png)
 
 ## 3.2 ToPNoise modules
 
