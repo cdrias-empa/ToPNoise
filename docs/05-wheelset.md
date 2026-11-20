@@ -63,7 +63,7 @@ Two predefined railway passenger wheels are available. Their geometries are show
   <b>Wheelset 1 (small) - diameter 750 mm, left; Wheelset 2 (large) - diameter 920 mm, right.</b>
 </p>
 
-The reference coordinate system used for the wheelset is:
+The reference coordinate system used in the FE models is:
 
 - **X**: longitudinal direction (direction of travel);
 - **Y**: vertical/radial direction;
