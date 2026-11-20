@@ -107,7 +107,7 @@ The different force positions are provided to account for variations in the late
 
 Select one or more wheel–rail contact positions on the wheel tread:
 
-- **Nominal**: reference contact position, located **7 cm across the wheel tread**;
+- **Nominal**: reference contact position, located **7 cm from the wheel flange**;
 - **Offset-in**: located **1 cm inwards** from the nominal position;
 - **Offset-out**: located **1 cm outwards** from the nominal position.
 
