@@ -2,7 +2,10 @@
 
 The Wheelset FE module calculates the **frequency response** of a railway wheelset.
 
-The wheelset is modelled under **free boundary conditions**. The **rotation of the wheels is not taken into account**.
+### Assumptions
+
+- The wheelset is modelled under **free boundary conditions**.
+- The **rotation of the wheels is not taken into account**.
 
 The calculation is carried out in two main steps:
 
