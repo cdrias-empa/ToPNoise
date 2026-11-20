@@ -116,38 +116,29 @@ Set the minimum and maximum frequencies of the calculated frequency response. Th
 
 ## 5.5 Results
 
-For a simulation called `wheel_study`, with all three force positions selected, the output folder has the following structure:
+For a simulation called `wheel_study`, the results are stored under:
 
-- `wheel_study/`
-  - `Modes/`
-    - `base_modes/`
-    - `fn.txt`
-    - `modes.med`
-    - `parameters.json`
-  - `nominal/`
-    - `parameters.json`
-    - `nodeCoordinates_FE.txt`
-    - `nodeCoordinates.txt`
-    - `vertical/`
-      - `Inputs/`
-      - `Outputs/`
-        - `FRFcontact_vert.txt`
-        - `FRF_vert.txt`
-        - `nodeCoordinates.txt`
-        - `nodeCoordinates_FE.txt`
-      - `Messages/`
-    - `lateral/`
-      - `Inputs/`
-      - `Outputs/`
-        - `FRFcontact_lat.txt`
-        - `FRF_lat.txt`
-        - `nodeCoordinates.txt`
-        - `nodeCoordinates_FE.txt`
-      - `Messages/`
-  - `offsetIN/`
-    - same structure as `nominal/`
-  - `offsetOUT/`
-    - same structure as `nominal/`
+| Path | Content |
+|---|---|
+| `wheel_study/Modes/` | Modal basis and natural frequencies |
+| `wheel_study/nominal/` | Results for the nominal contact position |
+| `wheel_study/offsetIN/` | Results for the inward offset position |
+| `wheel_study/offsetOUT/` | Results for the outward offset position |
+| `<contact case>/vertical/Outputs/` | Response to vertical excitation |
+| `<contact case>/lateral/Outputs/` | Response to lateral excitation |
+| `<contact case>/vertical/Messages/` | Code_Aster messages for the vertical calculation |
+| `<contact case>/lateral/Messages/` | Code_Aster messages for the lateral calculation |
+
+The main result files are:
+
+| File | Content |
+|---|---|
+| `FRFcontact_vert.txt` | Driving-point response for vertical excitation |
+| `FRFcontact_lat.txt` | Driving-point response for lateral excitation |
+| `FRF_vert.txt` | Wheel-surface response for vertical excitation |
+| `FRF_lat.txt` | Wheel-surface response for lateral excitation |
+| `FRF_vert.med` | Wheel-surface response for visualization |
+| `FRF_lat.med` | Wheel-surface response for visualization |
   
 The `Modes` folder is created only when the modal basis is calculated. It contains the natural frequencies and the modal basis used for the frequency-response calculation.
 
