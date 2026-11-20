@@ -11,10 +11,12 @@ The extracted folder is initially called `ToPNoise-main`. Rename it to `ToPNoise
 Open a terminal and move to the folder where you extracted ToPNoise:
 
 ```bash
-cd /path/to/ToPNoise
+cd ~/path/to/ToPNoise
 ```
 
-All commands in the following section are run from the ToPNoise folder.
+Replace the path above with the actual location of your ToPNoise folder.
+
+All commands below are run from the ToPNoise folder.
 
 ## 2.2 Install ToPNoise
 
@@ -46,4 +48,4 @@ images/
 └── Postprocessing.sif
 ```
 
-If the installation completes without errors, continue to [chapter 3](03-first-launch.md) to launch the Graphical User Interface.
+Once both scripts complete without errors, continue to [chapter 3](03-first-launch.md) to launch the ToPNoise graphical user interface.
