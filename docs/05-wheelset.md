@@ -119,21 +119,23 @@ Set the minimum and maximum frequencies of the calculated frequency response. Th
 
 ## 5.4 Execution
 
-The **Execution** tab is used to add the defined simulations to the queue and run them.
+![Wheelset FE — Execution tab](images/05-03-wheelset-execution.png)
 
 **1 — Simulation queue**  
-Shows the simulations added to the queue, their contact position and their current status.
+Shows the simulations added to the queue, the corresponding contact position and their current status.
 
 **2 — Add to queue**  
-Add the simulation to the queue. A separate simulation is added for each selected contact position.
+Add the defined simulation to the queue. One simulation is added for each selected force position.
 
 **3 — Start queue**  
-Run the queued simulations sequentially. The status changes from `Queued` to `Running` and then to `Done` or `Failed`.
+Run the queued simulations sequentially. The status of each simulation changes from `Queued` to `Running` and then to `Done` or `Failed`.
 
 **4 — Remove selected**  
 Remove the selected simulations from the queue.
 
 When **Compute modes** is selected, the modal basis is calculated for the first contact position and reused for the remaining contact positions.
+
+If an output folder for one of the selected contact positions already exists, the user is asked whether it should be overwritten.
 
 ## 5.5 Results
 
