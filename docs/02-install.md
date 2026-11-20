@@ -1,4 +1,3 @@
-````markdown
 ## 2.2 Install ToPNoise
 
 Run the installation script:
