@@ -103,7 +103,17 @@ Two damping options are available:
 - **Constant**: the value specified under **Zeta** is applied to all modes.
 
 **6 — Force position**  
-Select one or more wheel–rail contact positions: **Nominal**, **Offset-in** and **Offset-out**. A separate simulation is added to the queue for each selected position.
+The different force positions are provided to account for variations in the lateral position of the wheel–rail contact as the train moves along the track.
+
+Select one or more wheel–rail contact positions on the wheel tread:
+
+- **Nominal**: reference contact position, located **7 cm across the wheel tread**;
+- **Offset-in**: located **1 cm inwards** from the nominal position;
+- **Offset-out**: located **1 cm outwards** from the nominal position.
+
+**Inwards** refers to the inner side of the wheelset, towards the centre of the axle. **Outwards** refers to the opposite direction.
+
+A separate simulation is added to the queue for each selected force position.
 
 **7 — Frequency range**  
 Set the minimum and maximum frequencies of the calculated frequency response. An adaptive frequency grid is generated between these limits.
