@@ -63,7 +63,7 @@ The two predefined wheelset geometries are shown below.
 
 <p align="center">
   <img src="images/05-03-wheelset-geometry-small.png" alt="Wheelset 1 (small)" width="48%">
-  <img src="images/05-03-wheelset-geometry-large.png" alt="Wheelset 2 (large)" width="48%">
+  <img src="images/05-04-wheelset-geometry-large.png" alt="Wheelset 2 (large)" width="48%">
 </p>
 
 <p align="center">
