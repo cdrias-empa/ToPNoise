@@ -26,12 +26,6 @@ bash setup/install_singularity_linux.sh
 
 The script installs Singularity and the system programs required to run ToPNoise. It uses `sudo` and may therefore ask for your password.
 
-**Expected result**: the installation finishes with:
-
-```text
-Installation of singularity completed
-```
-
 Then download the four ToPNoise container images:
 
 ```bash
