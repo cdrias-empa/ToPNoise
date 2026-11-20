@@ -38,7 +38,7 @@ Select the folder where the simulation results will be stored.
 
 ### Compute modes
 
-If **Compute modes** is selected, the wheelset modes are calculated before the frequency response.
+If **Compute modes** is selected, the wheelset modes are calculated.
 
 If **Compute modes** is not selected, an existing `Modes` folder must be provided. This allows previously calculated modes to be reused without repeating the modal calculation.
 
