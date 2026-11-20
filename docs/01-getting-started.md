@@ -2,7 +2,7 @@
 
 ## 1.1 Requirements
 
-### 1.1.1 Operating system
+### Operating system
 
 ToPNoise has been tested on **Ubuntu 24.04 LTS, on 64-bit PCs (x86_64 / amd64)**. Later Ubuntu releases may also be used provided that the packages required by the installation script are available.
 
@@ -17,18 +17,18 @@ uname -m
 
 > **Windows users**: Ubuntu running inside Windows using WSL2 can also be used. It has been tested only briefly: the containers and the module windows start, but no full calculation has been checked.
 
-### 1.1.2 Disk space
+#### Disk space
 
 At least **10 GB of free disk space** is required for the ToPNoise installation. Additional disk space is required for calculation results. Depending on the calculation, the results of a full study can require several gigabytes.
 
 > [!WARNING]
 > **TODO:** Give a rough estimate of the required space for a given standard case.
 
-### 1.1.3 Computing power
+#### Computing power
 
 The ToPNoise calculations are computationally demanding and can take from minutes to hours. We recommend having at least **8 CPU cores** and **64 GB of RAM**. More computational power will reduce computation time.
 
-### 1.1.4 Display
+### Display
 
 The ToPNoise launcher and the four modules use graphical interfaces and therefore require access to a display.
 
@@ -43,17 +43,17 @@ echo $DISPLAY
 > [!WARNING]
 > **TODO:** Remove the appendix on remote access until remote connection support is implemented and documented.
 
-### 1.1.5 Internet connection
+### Internet connection
 
 An internet connection is required during the installation to download the required system packages and the ToPNoise container images.
 
-### 1.1.6 Administrator rights
+### Administrator rights
 
 Administrator rights (`sudo`) are required during the installation to install the necessary system packages.
 
 ## 1.2 Installation
 
-### 1.2.1 Download ToPNoise
+### Download ToPNoise
 
 Open the ToPNoise repository on GitHub, click **Code**, and select **Download ZIP**.
 
@@ -71,7 +71,7 @@ Replace the path above with the actual location of your ToPNoise folder.
 
 All commands below are run from the ToPNoise folder.
 
-### 1.2.2 Install ToPNoise
+### Install ToPNoise
 
 Run the installation script:
 
@@ -105,7 +105,7 @@ Once both scripts complete without errors, continue to [section 1.3](#13-launchi
 
 ## 1.3 Launching ToPNoise
 
-### 1.3.1 Start ToPNoise
+### Start ToPNoise
 
 Open a terminal, move to the ToPNoise folder, and run:
 
@@ -129,7 +129,7 @@ The ToPNoise launcher then opens:
 
 ![The ToPNoise launcher](images/03-02-launcher.png)
 
-### 1.3.2 ToPNoise modules
+### ToPNoise modules
 
 The launcher provides access to the four ToPNoise modules:
 
