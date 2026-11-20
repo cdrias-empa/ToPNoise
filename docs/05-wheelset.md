@@ -117,6 +117,24 @@ A separate simulation is added to the queue for each selected force position.
 **7 — Frequency range**  
 Set the minimum and maximum frequencies of the calculated frequency response. The modal basis is calculated to **1.5 times the maximum frequency** including the rigid-body motion.
 
+## 5.4 Execution
+
+The **Execution** tab is used to add the defined simulations to the queue and run them.
+
+**1 — Simulation queue**  
+Shows the simulations added to the queue, their contact position and their current status.
+
+**2 — Add to queue**  
+Add the simulation to the queue. A separate simulation is added for each selected contact position.
+
+**3 — Start queue**  
+Run the queued simulations sequentially. The status changes from `Queued` to `Running` and then to `Done` or `Failed`.
+
+**4 — Remove selected**  
+Remove the selected simulations from the queue.
+
+When **Compute modes** is selected, the modal basis is calculated for the first contact position and reused for the remaining contact positions.
+
 ## 5.5 Results
 
 For a simulation called `wheel_study`, the results are stored under:
