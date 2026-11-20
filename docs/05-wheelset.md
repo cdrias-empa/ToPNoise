@@ -39,7 +39,7 @@ Select the folder where the simulation results will be stored.
 
 **3 — Write MED**  
 
-Select **Write MED** to additionally export the wheel response as MED files for visualization of the wheel surface vibration.
+Select **Write MED** to additionally export the wheel response as MED files to visualize the wheelset surface vibration (can be read with ParaView for example).
 
 **4 — Compute modes**  
 
