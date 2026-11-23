@@ -24,8 +24,6 @@ The calculation is therefore carried out in two main steps:
 
 If an existing BEM boundary solution is used, only the second step is repeated.
 
-For the **rail and sleepers**, the acoustic model is divided into several substructures which are calculated in parallel and combined afterwards. The **wheel** is calculated as a single structure and the calculation is parallelized over the frequency steps.
-
 The graphical interface is divided into four tabs:
 
 - **General**
