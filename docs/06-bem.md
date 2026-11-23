@@ -108,14 +108,9 @@ Select the folder corresponding to the previously calculated track contact case.
 
 **4 — BE mesh**  
 
-Select the BE mesh used for the rail and sleepers. Predefined meshes are available for:
+Select the BE mesh used for the rail and sleepers. Predefined meshes are available for **UIC 60E2**, **UIC 54E2** rail profiles and their corresponding **B91 concrete sleeper**.
 
-- **UIC 60E2** profile.
-- **UIC 54E2** profile.
-
-When an input displacement field folder is selected, the rail and sleeper types are read from the structural simulation and the corresponding BEM meshes are selected automatically.
-
-When an input displacement field folder is selected, the rail type is read from the structural simulation and the corresponding mesh is selected automatically.
+When an input displacement field folder is selected, the rail and sleeper types are read from the structural simulation and the corresponding BE meshes are selected automatically.
 
 Select **Custom** to use another rail BEM mesh.
 
