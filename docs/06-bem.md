@@ -30,3 +30,43 @@ The graphical interface is divided into four tabs:
 - **Track**
 - **Wheel**
 - **Execution**
+
+## 6.2 General
+
+The **General** tab defines the output location, receiver positions, computational backend and force directions used for the acoustic calculations.
+
+![BEM — General tab](images/06-01-bem-general.png)
+
+**1 — Output folder**  
+
+Select the folder where the BEM results will be stored.
+
+**2 — Receiver position**  
+
+Select the receiver positions where the acoustic pressure is calculated. Two predefined measurement positions are available:
+
+- **M75**: 7.5 m from the track centreline and 1.2 m above the rail head;
+- **M3**: 3 m from the track centreline and 1.2 m above the rail head.
+
+For both predefined positions, the receivers are distributed along a line parallel to the track from **−25 m to +25 m**, with a spacing of **0.1 m**.
+
+Select **Custom** to define other receiver positions.
+
+**3 — Custom receiver**  
+
+For custom receivers, select a `.csv` or `.xlsx` file without a header. Each row defines one receiver using three columns:
+
+1. lateral distance from the track centreline [m];
+2. height above the rail head [m];
+3. longitudinal position relative to the centre of the model [m].
+
+**4 — Device Interface**  
+
+Select the computational backend used for the BEM calculation:
+
+- **opencl**
+- **numba**
+
+**5–6 — Force direction**  
+
+Select whether the acoustic response is calculated from the structural response to the **vertical**, **lateral**, or both unit forces. The two directions are calculated separately.
