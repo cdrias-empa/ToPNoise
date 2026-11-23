@@ -123,7 +123,7 @@ Select **Custom** to use another rail and/or sleeper BEM mesh and specify the co
 
 **6 — Rail height**  
 
-Defines the rail height used to position the sleeper receiver points relative to the rail head.
+Define the rail height used to position the sleeper receiver points relative to the rail head.
 
 For the predefined rail meshes, the value is assigned automatically:
 
@@ -151,14 +151,12 @@ The required number of substructures depends on the spatial extent of the struct
 > [!NOTE]
 > The number of substructures must be an **odd number** so that the acoustic model remains centred around the reference substructure.
 
+**8 — Number of workers**  
 
-The number of substructures determines the total length of the rail and sleepers included in the acoustic calculation. To simulate the acoustic radiation of a given rail and/or sleeper section, a substructuring approach is used. A reference substructure mesh is defined for both the rail and sleepers (see Figure X). This reference substructure is duplicated to the left and right along the longitudinal direction of the track until the required length is reached (see Figure X).
+The BE problem is solved separately for each substructure, allowing the calculations to be parallelized and reducing the overall computation time. The number of substructure calculations performed simultaneously is controlled by the **number of workers**. Increasing the number of workers can reduce the calculation time, provided that sufficient CPU cores are available.
 
-**7 — Number of workers (rail)**  
-
-Define the maximum number of rail substructures calculated simultaneously.
-
-Increasing the number of workers can reduce the calculation time, but also increases the required computational resources.
+> [!NOTE]
+> The number of workers should be selected according to the available computational resources. As a rule of thumb, at least **three to four CPU cores per worker** should be available. It is also recommended to choose the number of workers as an integer divisor of the total number of available CPU cores.
 
 **8 — Zero-velocity groups**  
 
