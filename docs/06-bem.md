@@ -11,7 +11,7 @@ The main outputs **per component** are:
 
 ### Assumptions
 
-- The acoustic radiation is calculated in **free field**. Ground and ballast effects are not taken into account.
+- The acoustic radiation is calculated in **free field**. Propagation effects from the ground and ballast are not taken into account.
 - The **rail, sleepers and wheel are treated as independent acoustic radiators**.
 - The acoustic model includes **one rail and one wheel** only.
 
