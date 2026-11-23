@@ -108,33 +108,39 @@ Select the folder corresponding to the previously calculated track contact case.
 
 **4 — BE mesh**  
 
-Select the BE mesh used for the rail and sleepers. Predefined meshes are available for **UIC 60E2**, **UIC 54E2** rail profiles and their corresponding **B91 concrete sleeper**.
+Select the BE mesh used for the rail and sleepers. Predefined meshes are available for **UIC 60E2**, **UIC 54E2** rail profiles and their corresponding **B91 sleeper** mesh.
 
 When an input displacement field folder is selected, the rail and sleeper types are read from the structural simulation and the corresponding BE meshes are selected automatically.
 
 Select **Custom** to use another rail BEM mesh.
 
-**5 — Custom rail mesh**  
+**5 — Custom BE mesh**  
 
-Select the `.msh` file containing the custom rail BEM mesh.
+Select **Custom** to use another rail and/or sleeper BEM mesh and specify the corresponding `.msh` file.
 
 > [!NOTE]
 > Using a **Custom** BE mesh is an advanced option. Contact the developers for further information on setting up a new mesh.
 
-**6 — Number of rail substructures**  
+**6 — Rail height**  
 
-Define the number of rail substructures used in the acoustic model. The reference rail BEM mesh is repeated along the longitudinal direction to construct the complete rail model.
+Defines the rail height used to position the sleeper receiver points relative to the rail head.
 
-The number of substructures must be an **odd number** so that the model remains centred around the reference substructure.
+For the predefined rail meshes, the value is assigned automatically:
 
-The default value is **15 substructures**.
+- **60E2**: 0.172 m;
+- **54E2**: 0.161 m.
 
-The number of substructures determines the total length of the rail and sleepers included in the acoustic calculation. To simulate the acoustic radiation of a given rail and/or sleeper section, a substructuring approach is used. A reference substructure mesh is defined for both the rail and sleepers (see Figure X). This reference substructure is duplicated to the left and right along the longitudinal direction of the track until the required length is reached (see Figure X).
+**7 — Number of substructures**  
+
+The number of substructures determines the total length of the rail and sleepers section included in the acoustic calculation. To simulate the acoustic radiation of a given rail and/or sleeper section, a substructuring approach is used. A reference substructure mesh is defined for both the rail and sleepers (see Figure X). This reference substructure is duplicated to the left and right along the longitudinal direction of the track until the required length is reached (see Figure X).
 
 The surface velocity field obtained from the FE models is projected onto each substructure, and the BE problem is solved separately for each one. The total acoustic pressure at the receiver positions is then obtained by summing the complex pressure contributions from all substructures.
 
 The total number of substructures is defined by the user. For example, for a UIC 60E2 rail profile, a 54 m rail section can be simulated using **15 substructures**.
 
+The number of substructures must be an **odd number** so that the acoustic model remains centred around the reference substructure.
+
+The number of substructures determines the total length of the rail and sleepers included in the acoustic calculation. To simulate the acoustic radiation of a given rail and/or sleeper section, a substructuring approach is used. A reference substructure mesh is defined for both the rail and sleepers (see Figure X). This reference substructure is duplicated to the left and right along the longitudinal direction of the track until the required length is reached (see Figure X).
 
 **7 — Number of workers (rail)**  
 
