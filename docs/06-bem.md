@@ -8,6 +8,15 @@ The main outputs are:
 - **Radiated sound power** of each component;
 - **Boundary solution** on the vibrating surface, which can be reused to calculate the acoustic pressure at different receiver positions without repeating the BEM solution.
 
+### Assumptions
+
+- The acoustic radiation is calculated in **free field**. Ground reflections, ballast reflections and shielding are not taken into account.
+- The **rail, sleepers and wheel are treated as independent acoustic radiators**. Acoustic scattering between the different components is not included.
+- The acoustic model includes **one rail and one wheel**.
+- The rail and sleeper models are extended along the track by repeating the corresponding BEM substructures.
+- The acoustic medium is air with a speed of sound of **343 m/s** and a density of **1.21 kg/m³**.
+
+
 The structural vibration field is first transferred from the FE surface mesh to the corresponding BEM mesh. The normal surface velocity is then calculated and used as boundary condition for the acoustic calculation. The resulting surface pressure is used to calculate the radiated sound power and the acoustic pressure at the receiver positions.
 
 The calculation is therefore carried out in two main steps:
