@@ -82,7 +82,7 @@ If an existing `Modes` folder is used, the wheel geometry and material propertie
 **2 — Export displacement field for BEM**  
 Select this option to export the vibration response over the wheel surface for the subsequent Boundary Elements calculation. If it is not selected, only the driving-point FRFs at the selected contact positions are calculated.
 
-The structural response is calculated for the full wheelset. The resulting vibration field on the wheelset surface is projected on a **single wheel** only. The **projection mesh** is provided automatically for each predefined wheelset.
+The structural response is calculated for the full wheelset. To compute the acoustic radiation, the resulting vibration field on the wheelset surface is extracted and projected on a **single wheel** only. The **projection mesh** is provided automatically for each predefined wheelset.
 
 <p align="center">
   <img src="images/05-05-wheelset-projection-mesh-small.png" alt="Wheelset 1 (small)" width="48%">
