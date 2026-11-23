@@ -137,14 +137,14 @@ When **Compute modes** is selected, the modal basis is calculated for the first 
 
 ## 5.5 Results
 
-For a simulation called `wheel_study`, one folder is created for each selected wheel–rail contact position. The responses to the vertical and lateral unit forces are stored separately.
+For a simulation called `wheels_structural`, one folder is created for each selected wheel–rail contact position. The responses to the vertical and lateral unit forces are stored separately.
 
 | Path | Content |
 |---|---|
-| `wheel_study/Modes/` | Modal basis of the wheelset |
-| `wheel_study/nominal/` | Results for the nominal contact position |
-| `wheel_study/offsetIN/` | Results for the inward contact position |
-| `wheel_study/offsetOUT/` | Results for the outward contact position |
+| `wheels_structural/Modes/` | Modal basis of the wheelset |
+| `wheels_structural/nominal/` | Results for the nominal contact position |
+| `wheels_structural/offsetIN/` | Results for the inward contact position |
+| `wheels_structural/offsetOUT/` | Results for the outward contact position |
 | `<contact position>/vertical/Outputs/` | Vertical harmonic-response results |
 | `<contact position>/lateral/Outputs/` | Lateral harmonic-response results |
 
