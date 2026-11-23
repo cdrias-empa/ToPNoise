@@ -156,7 +156,7 @@ The required number of substructures depends on the spatial extent of the struct
 The BE problem is solved separately for each substructure, allowing the calculations to be parallelized and reducing the overall computation time. The number of substructure calculations performed simultaneously is controlled by the **number of workers**. Increasing the number of workers can reduce the calculation time, provided that sufficient CPU cores are available.
 
 > [!NOTE]
-> The number of workers should be selected according to the available computational resources. As a rule of thumb, at least **three to four CPU cores per worker** should be available. It is also recommended to choose the number of workers as an **integer divisor of the total number of available CPU cores**.
+> The number of workers should be selected according to the available computational resources. As a rule of thumb, at least **3 to 4 CPU cores per worker** should be available. It is also recommended to choose the number of workers as an **integer divisor of the total number of available CPU cores**.
 
 **8 — Zero-velocity groups**  
 
