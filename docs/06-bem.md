@@ -158,61 +158,14 @@ The BE problem is solved separately for each substructure, allowing the calculat
 > [!NOTE]
 > The number of workers should be selected according to the available computational resources. As a rule of thumb, at least **3 to 4 CPU cores per worker** should be available. It is also recommended to choose the number of workers as an **integer divisor of the total number of available CPU cores**.
 
-**8 — Zero-velocity groups**  
+**9 — Zero-velocity groups**  
 
-Optionally specify physical groups of the BEM mesh for which the normal surface velocity is set to zero. Multiple group names can be entered separated by commas.
+Specify physical groups of the BE mesh for which the normal surface velocity is set to zero. Multiple group names can be entered separated by commas.
 
-Leave this field empty if no part of the mesh should be excluded from the acoustic radiation.
+The sleepers are embedded within the ballast and their bottom surface does not radiate. For the predefined sleeper meshes the default group is `bottom`, corresponding to the bottom surface of the sleepers, which is set to zero.
 
-**9 — Save VTK**  
+Leave the field empty if no surface should be excluded from the acoustic radiation.
 
-Select this option to export the interpolated vibration field on the complete rail BEM mesh in VTK format for visualization.
+**10 — Save VTK**  
 
-### Sleepers
-
-**10 — Sleeper mesh**  
-
-Select the BEM mesh used for the sleepers. Predefined meshes are available for the **B91 sleeper** combined with the 60E2 and 54E2 rail types.
-
-The sleeper mesh is selected automatically from the structural simulation together with the corresponding rail type.
-
-Select **Custom** to use another sleeper BEM mesh.
-
-**11 — Custom sleeper mesh**  
-
-Select the `.msh` file containing the custom sleeper BEM mesh.
-
-**12 — Rail height**  
-
-Defines the rail height used to position the receiver points relative to the rail head.
-
-For the predefined rail meshes, the value is assigned automatically:
-
-- **60E2**: 0.172 m;
-- **54E2**: 0.161 m.
-
-The value can be modified when a custom rail mesh is used.
-
-**13 — Number of sleeper substructures**  
-
-Define the number of sleeper substructures used in the acoustic model. Each sleeper substructure contains **five sleepers**, and the substructures are repeated along the longitudinal direction.
-
-The number of substructures must be an **odd number**.
-
-The default value is **9 substructures**, corresponding to **45 sleepers**.
-
-**14 — Number of workers (sleepers)**  
-
-Define the maximum number of sleeper substructures calculated simultaneously.
-
-As for the rail, increasing the number of workers can reduce the calculation time at the cost of higher computational resource usage.
-
-**15 — Zero-velocity groups**  
-
-Specify physical groups of the sleeper BEM mesh for which the normal surface velocity is set to zero.
-
-For the predefined sleeper meshes, the default group is `bottom`, corresponding to the bottom surface of the sleepers.
-
-**16 — Save VTK**  
-
-Select this option to export the interpolated vibration field on the complete sleeper BEM mesh in VTK format for visualization.
+Select this option to export the interpolated vibration field on the complete BE mesh in VTK format for visualization.
