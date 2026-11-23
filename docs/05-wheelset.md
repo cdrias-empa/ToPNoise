@@ -108,7 +108,7 @@ Two damping options are available:
 **6 — Force position**  
 The different force positions are provided to account for variations in the lateral position of the wheel–rail contact as the train moves along the track. Select one or more wheel–rail contact positions on the wheel tread:
 
-- **Nominal**: reference contact position, located **7 cm from the wheel flange**;
+- **Nominal**: reference contact position, located **7 cm from the back face rim of the wheel**;
 - **Offset-in**: located **1 cm inwards** from the nominal position (**towards the inner side of the wheelset**);
 - **Offset-out**: located **1 cm outwards** from the nominal position (**towards the outer side of the wheelset**).
 
