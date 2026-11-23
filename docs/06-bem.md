@@ -139,6 +139,10 @@ The number of substructures determines the total length of the rail and sleepers
   <img src="images/06-04-bem-B91-60E2-mesh.png" alt="B91-60E2 sleepers cell (5 sleepers)" width="48%">
 </p>
 
+<p align="center">
+  <b>UIC 60E2 rail cell (3.6 meters), left; B91-60E2 sleepers cell (5 sleepers), right.</b>
+</p>
+
 The surface velocity field obtained from the FE models is projected onto each substructure, and the BE problem is solved separately for each one. The total acoustic pressure at the receiver positions is then obtained by summing the complex pressure contributions from all substructures.
 
 The total number of substructures is defined by the user. For example, for a UIC 60E2 rail profile, a 54 m rail section can be simulated using **15 substructures**.
