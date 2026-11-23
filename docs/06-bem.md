@@ -4,7 +4,7 @@ The Boundary Elements Method (BEM) module calculates the acoustic radiation of t
 
 The main outputs **per component** are:
 
-- **Acoustic pressure for unit force** at the defined receiver positions;
+- **Acoustic pressure per unit force** at the defined receiver positions;
 - **Radiated sound power per squared unit force**;
 - **Radiation efficiency**;
 - **Boundary solution** on the vibrating surface (boundary normal velocity and pressure), which can be reused to calculate the acoustic pressure at different receiver positions without repeating the BEM solution.
