@@ -71,3 +71,137 @@ Select the computational backend used for the BEM calculation:
 **5–6 — Force direction**  
 
 Select whether the acoustic response is calculated from the structural response to the **vertical**, **lateral**, or both unit forces. The two directions are calculated separately.
+
+## 6.3 Track
+
+The **Track** tab defines the input structural response and the BE calculation settings for the **rail and sleepers**.
+
+![BEM — Track tab](images/06-02-bem-track.png)
+
+**1 — Track case name**  
+
+Enter a name for the track acoustic simulation. A folder with this name is created in which the BE results are stored.
+
+**2 — Input displacement field folder**  
+
+Select the folder corresponding to one contact case calculated with the Multi-Sleeper Model.
+
+The rail and sleeper types are read automatically from the structural simulation parameters and the corresponding predefined BE meshes are selected.
+
+The selected folder must correspond to one of the following contact cases:
+
+- `midSpan_nominal`
+- `midSpan_offsetIN`
+- `midSpan_offsetOUT`
+- `quarterSpan_nominal`
+- `quarterSpan_offsetIN`
+- `quarterSpan_offsetOUT`
+- `onSleeper_nominal`
+- `onSleeper_offsetIN`
+- `onSleeper_offsetOUT`
+
+**3 — Use existing BE results**  
+
+Select this option to reuse an existing BE boundary solution and calculate the acoustic pressure at different receiver positions without repeating the first step of the BE solution.
+
+Select the folder corresponding to the previously calculated track contact case. The existing boundary solutions of the rail and/or sleepers are then used depending on the components selected for execution. Only the acoustic field at the new receiver positions is recalculated.
+
+### Rail
+
+**4 — Rail mesh**  
+
+Select the BEM mesh used for the rail. Predefined meshes are available for:
+
+- **UIC 60E2** profile.
+- **UIC 54E2** profile.
+
+When an input displacement field folder is selected, the rail type is read from the structural simulation and the corresponding mesh is selected automatically.
+
+Select **Custom** to use another rail BEM mesh.
+
+**5 — Custom rail mesh**  
+
+Select the `.msh` file containing the custom rail BEM mesh.
+
+> [!NOTE]
+> Using a **Custom** BE mesh is an advanced option. Contact the developers for further information on setting up a new mesh.
+
+**6 — Number of rail substructures**  
+
+Define the number of rail substructures used in the acoustic model. The reference rail BEM mesh is repeated along the longitudinal direction to construct the complete rail model.
+
+The number of substructures must be an **odd number** so that the model remains centred around the reference substructure.
+
+The default value is **15 substructures**.
+
+The number of substructures determines the total length of the rail and sleepers included in the acoustic calculation. To simulate the acoustic radiation of a given rail and/or sleeper section, a substructuring approach is used. A reference substructure mesh is defined for both the rail and sleepers (see Figure X). This reference substructure is duplicated to the left and right along the longitudinal direction of the track until the required length is reached (see Figure X).
+
+The surface velocity field obtained from the FE models is projected onto each substructure, and the BE problem is solved separately for each one. The total acoustic pressure at the receiver positions is then obtained by summing the complex pressure contributions from all substructures.
+
+The total number of substructures is defined by the user. For example, for a UIC 60E2 rail profile, a 54 m rail section can be simulated using **15 substructures**.
+
+
+**7 — Number of workers (rail)**  
+
+Define the maximum number of rail substructures calculated simultaneously.
+
+Increasing the number of workers can reduce the calculation time, but also increases the required computational resources.
+
+**8 — Zero-velocity groups**  
+
+Optionally specify physical groups of the BEM mesh for which the normal surface velocity is set to zero. Multiple group names can be entered separated by commas.
+
+Leave this field empty if no part of the mesh should be excluded from the acoustic radiation.
+
+**9 — Save VTK**  
+
+Select this option to export the interpolated vibration field on the complete rail BEM mesh in VTK format for visualization.
+
+### Sleepers
+
+**10 — Sleeper mesh**  
+
+Select the BEM mesh used for the sleepers. Predefined meshes are available for the **B91 sleeper** combined with the 60E2 and 54E2 rail types.
+
+The sleeper mesh is selected automatically from the structural simulation together with the corresponding rail type.
+
+Select **Custom** to use another sleeper BEM mesh.
+
+**11 — Custom sleeper mesh**  
+
+Select the `.msh` file containing the custom sleeper BEM mesh.
+
+**12 — Rail height**  
+
+Defines the rail height used to position the receiver points relative to the rail head.
+
+For the predefined rail meshes, the value is assigned automatically:
+
+- **60E2**: 0.172 m;
+- **54E2**: 0.161 m.
+
+The value can be modified when a custom rail mesh is used.
+
+**13 — Number of sleeper substructures**  
+
+Define the number of sleeper substructures used in the acoustic model. Each sleeper substructure contains **five sleepers**, and the substructures are repeated along the longitudinal direction.
+
+The number of substructures must be an **odd number**.
+
+The default value is **9 substructures**, corresponding to **45 sleepers**.
+
+**14 — Number of workers (sleepers)**  
+
+Define the maximum number of sleeper substructures calculated simultaneously.
+
+As for the rail, increasing the number of workers can reduce the calculation time at the cost of higher computational resource usage.
+
+**15 — Zero-velocity groups**  
+
+Specify physical groups of the sleeper BEM mesh for which the normal surface velocity is set to zero.
+
+For the predefined sleeper meshes, the default group is `bottom`, corresponding to the bottom surface of the sleepers.
+
+**16 — Save VTK**  
+
+Select this option to export the interpolated vibration field on the complete sleeper BEM mesh in VTK format for visualization.
