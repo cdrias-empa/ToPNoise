@@ -68,7 +68,7 @@ Select the computational backend used for the BEM calculation:
 - **opencl** (recommended for faster computations);
 - **numba**.
 
-**5–6 — Force direction**  
+**5 — Force direction**  
 
 Select whether the acoustic response is calculated from the structural response to the **vertical**, **lateral**, or both unit forces. The two directions are calculated separately.
 
