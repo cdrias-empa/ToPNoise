@@ -115,7 +115,7 @@ The different force positions are provided to account for variations in the late
 A separate simulation is added to the queue for each selected force position.
 
 **7 — Frequency range**  
-Set the minimum and maximum frequencies of the calculated frequency response. The modal basis is calculated to **1.5 times the maximum frequency** including the rigid-body motion.
+Set the minimum and maximum frequencies of the calculated frequency response. The modal basis is calculated to **1.5 times the maximum frequency** including the rigid-body modes.
 
 ## 5.4 Execution
 
