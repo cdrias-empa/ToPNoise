@@ -2,11 +2,12 @@
 
 The Boundary Elements Method (BEM) module calculates the acoustic radiation of the **rail, sleepers and wheel** from the vibration fields calculated with the FE models. Similar to the structural models, the acoustic calculation is carried out separately from the vibration field for **vertical and lateral unit forces**.
 
-The main outputs are:
+The main outputs **per component** are:
 
-- **Acoustic pressure per unit force** at the defined receiver positions;
-- **Radiated sound power per squared unit force** of each component;
-- **Boundary solution** on the vibrating surface, which can be reused to calculate the acoustic pressure at different receiver positions without repeating the BEM solution.
+- **Acoustic pressure for unit force** at the defined receiver positions;
+- **Radiated sound power per squared unit force**;
+- **Radiation efficiency**
+- **Boundary solution** on the vibrating surface (boundary normal velocity and pressure), which can be reused to calculate the acoustic pressure at different receiver positions without repeating the BEM solution.
 
 ### Assumptions
 
