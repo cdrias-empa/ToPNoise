@@ -135,8 +135,8 @@ For the predefined rail meshes, the value is assigned automatically:
 The number of substructures determines the total length of the rail and sleepers section included in the acoustic calculation. To simulate the acoustic radiation of a given rail and/or sleeper section, a substructuring approach is used. A reference substructure mesh is defined for both the rail and sleepers (see Figure X). This reference substructure is duplicated to the left and right along the longitudinal direction of the track until the required length is reached (see Figure X).
 
 <p align="center">
-  <img src="images/05-03-bem-60E2-mesh.png" alt="UIC 60E2 rail cell (3.6 meters)" width="48%">
-  <img src="images/05-04-bem-B91-60E2-mesh.png" alt="B91-60E2 sleepers cell (5 sleepers)" width="48%">
+  <img src="docs/images/06-03-bem-60E2-mesh.png" alt="UIC 60E2 rail cell (3.6 meters)" width="48%">
+  <img src="docs/images/06-04-bem-B91-60E2-mesh.png" alt="B91-60E2 sleepers cell (5 sleepers)" width="48%">
 </p>
 
 The surface velocity field obtained from the FE models is projected onto each substructure, and the BE problem is solved separately for each one. The total acoustic pressure at the receiver positions is then obtained by summing the complex pressure contributions from all substructures.
