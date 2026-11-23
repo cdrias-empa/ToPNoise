@@ -15,7 +15,7 @@ The main outputs **per component** are:
 - The **rail, sleepers and wheel are treated as independent acoustic radiators**.
 - The acoustic model includes **one rail and one wheel** only.
 
-The structural vibration field is first transferred from the FE surface mesh to the corresponding BEM mesh. The normal surface velocity is then calculated and used as boundary condition for the acoustic calculation. The resulting surface pressure is used to calculate the radiated sound power and the acoustic pressure at the receiver positions.
+The structural vibration field is first transferred from the FE surface mesh to the corresponding BE mesh. The normal surface velocity is then used as boundary condition for the acoustic calculation. The resulting surface pressure is used to calculate the radiated sound power and the acoustic pressure at the receiver positions.
 
 The calculation is therefore carried out in two main steps:
 
