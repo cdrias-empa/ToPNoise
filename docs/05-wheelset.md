@@ -102,7 +102,7 @@ Define the density, Young's modulus and Poisson's ratio of the wheelset material
 **5 — Damping**  
 Two damping options are available:
 
-- **Nominal**: the damping ratio is assigned according to the number of nodal diameters. The values are adopted from **[1]**.
+- **Nominal**: the damping ratio is assigned according to the number of nodal diameters of the mode. The values are adopted from **[1]**.
 - **Constant**: the value specified under **Zeta** is applied to all modes.
 
 **6 — Force position**  
