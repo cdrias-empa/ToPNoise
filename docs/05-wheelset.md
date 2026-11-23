@@ -141,12 +141,12 @@ For a simulation called `wheels_structural`, one folder is created for each sele
 
 | Path | Content |
 |---|---|
-| `wheels_structural/Modes/` | Modal basis of the wheelset |
-| `wheels_structural/nominal/` | Results for the nominal contact position |
-| `wheels_structural/offsetIN/` | Results for the inward contact position |
-| `wheels_structural/offsetOUT/` | Results for the outward contact position |
-| `<contact position>/vertical/Outputs/` | Vertical harmonic-response results |
-| `<contact position>/lateral/Outputs/` | Lateral harmonic-response results |
+| `wheels_structural/Modes/` | Modal basis results of the wheelset |
+| `wheels_structural/nominal/` | Harmonic results for the nominal contact position |
+| `wheels_structural/offsetIN/` | Harmonic results for the inward contact position |
+| `wheels_structural/offsetOUT/` | Harmonic results for the outward contact position |
+| `<contact position>/vertical/Outputs/` | Harmonic-response results for unit vertical force|
+| `<contact position>/lateral/Outputs/` | Harmonic-response results for unit lateral force|
 
 The main result files for each contact position are:
 
@@ -169,8 +169,8 @@ The `Modes` folder contains:
 
 - `fn.txt`: natural frequencies of the wheelset;
 - `modes.med`: calculated mode shapes in MED format;
-- `base_modes/`: modal basis used for the harmonic calculation;
-- `parameters.json`: parameters used for the modal calculation.
+- `base_modes/`: modal basis used for the harmonic simulation;
+- `parameters.json`: parameters used for the modes calculation.
 
 ## References
 
