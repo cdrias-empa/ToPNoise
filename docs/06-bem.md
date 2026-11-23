@@ -48,7 +48,8 @@ Select the receiver positions where the acoustic pressure is calculated. Two pre
 - **M75**: 7.5 m from the track centreline and 1.2 m above the rail head;
 - **M3**: 3 m from the track centreline and 1.2 m above the rail head.
 
-For both predefined positions, the receivers are distributed along a line parallel to the track from **−25 m to +25 m**, with a spacing of **0.1 m**.
+> [!NOTE]
+> For both predefined positions, the receivers are distributed along a line parallel to the track from **−25 m to +25 m**, with a spacing of **0.1 m**. This array of receivers is used later to reconstruct the single-axle pass-by.
 
 Select **Custom** to define other receiver positions.
 
