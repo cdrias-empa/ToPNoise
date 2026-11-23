@@ -174,5 +174,5 @@ The `Modes` folder contains:
 
 ## References
 
-[1]: D. J. Thompson. Railway Noise and Vibration: Mechanisms, Modelling and Means of Control. Elsevier,
+[1] D. J. Thompson. Railway Noise and Vibration: Mechanisms, Modelling and Means of Control. Elsevier,
 Oxford, UK, 1st edition, 2009.
