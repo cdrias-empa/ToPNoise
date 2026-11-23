@@ -65,8 +65,8 @@ For custom receivers, select a `.csv` or `.xlsx` file without a header. Each row
 
 Select the computational backend used for the BEM calculation:
 
-- **opencl** (recommended for faster computations)
-- **numba**
+- **opencl** (recommended for faster computations);
+- **numba**.
 
 **5–6 — Force direction**  
 
