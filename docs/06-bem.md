@@ -25,4 +25,3 @@ The graphical interface is divided into four tabs:
 - **Track**
 - **Wheel**
 - **Execution**
-````
