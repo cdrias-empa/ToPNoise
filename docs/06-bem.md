@@ -106,14 +106,14 @@ Select this option to reuse an existing BE boundary solution and calculate the a
 
 Select the folder corresponding to the previously calculated track contact case. The existing boundary solutions of the rail and/or sleepers are then used depending on the components selected for execution. Only the acoustic field at the new receiver positions is recalculated.
 
-### Rail
+**4 — BE mesh**  
 
-**4 — Rail mesh**  
-
-Select the BEM mesh used for the rail. Predefined meshes are available for:
+Select the BE mesh used for the rail and sleepers. Predefined meshes are available for:
 
 - **UIC 60E2** profile.
 - **UIC 54E2** profile.
+
+When an input displacement field folder is selected, the rail and sleeper types are read from the structural simulation and the corresponding BEM meshes are selected automatically.
 
 When an input displacement field folder is selected, the rail type is read from the structural simulation and the corresponding mesh is selected automatically.
 
