@@ -22,7 +22,7 @@ Internally, the calculation is therefore carried out in two main steps:
 1. calculation of the BE boundary solution from the structural vibration field;
 2. calculation of the acoustic field at the selected receiver positions.
 
-If an existing BEM boundary solution is used, only the second step is repeated.
+If an existing BE boundary solution is used, only the second step is repeated.
 
 The graphical interface is divided into four tabs:
 
