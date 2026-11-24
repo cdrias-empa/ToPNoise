@@ -325,9 +325,9 @@ The file `bemData_<component>_<direction>.h5` contains the BE boundary solution.
 |---|---|
 | `frequencies` | Calculated frequencies **[Hz]**|
 | `vertices`, `elements` | BE mesh |
-| `nodal_displacement` | Structural displacement on the BE mesh nodes **[m/N]**|
-| `normal_velocity` | Normal surface velocity on the BE mesh elements **[ms⁻¹/N]**|
-| `nodal_pressure` | Pressure on the BE mesh nodes **[Pa/N]** |
+| `nodal_displacement` | Structural displacement on the BE mesh nodes (complex) **[m/N]**|
+| `normal_velocity` | Normal surface velocity on the BE mesh elements (complex) **[ms⁻¹/N]**|
+| `nodal_pressure` | Pressure on the BE mesh nodes (complex) **[Pa/N]** |
 | `element_areas` | Areas of mesh elements **[m²]**|
 | `iterations` | Number of solver iterations |
 | `times` | Calculation time **[s]**|
@@ -342,7 +342,7 @@ The file `acouRes_<component>_<direction>.h5` contains:
 |---|---|
 | `frequencies` | Calculated frequencies **[Hz]**|
 | `receiver_positions` | Absolute Cartesian coordinates of the receiver positions **[m]**|
-| `pressure` | Complex acoustic pressure at each receiver **[Pa/N]** |
+| `pressure` | Acoustic pressure at each receiver (complex) **[Pa/N]** |
 | `power` | Radiated sound power **[W/N²]** |
 | `mean_square_velocity` | Spatially averaged mean square velocity **[m²s⁻²/N²]** |
 | `radiation_efficiency` | Radiation efficiency |
