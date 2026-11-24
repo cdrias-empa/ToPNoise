@@ -170,3 +170,63 @@ Leave the field empty if no surface should be excluded from the acoustic radiati
 **10 — Save VTK**  
 
 Select this option to export the interpolated vibration field on the complete BE mesh in VTK format for visualization (with ParaView for example).
+
+## 6.4 Wheel
+
+The **Wheel** tab defines the input structural response and the BE calculation settings for the **wheel**.
+
+![BEM — Wheel tab](images/06-03-bem-wheel.png)
+
+**1 — Wheel case name**  
+
+Enter a name for the wheel acoustic simulation. A folder with this name is created in which the BE results are stored.
+
+**2 — Input displacement field folder**  
+
+Select the folder corresponding to one contact position calculated with the Wheelset FE model.
+
+The wheel type is read automatically from the structural simulation parameters and the corresponding predefined BE mesh is selected.
+
+The selected folder must correspond to one of the following contact positions:
+
+- `nominal`
+- `offsetIN`
+- `offsetOUT`
+
+**3 — Use existing BE results**  
+
+Select this option to reuse an existing BE boundary solution and calculate the acoustic pressure at different receiver positions without repeating the first step of the BE solution.
+
+Select the folder corresponding to the previously calculated wheel contact position. Only the acoustic field at the new receiver positions is recalculated.
+
+**4 — BE mesh**  
+
+Select the BE mesh used for the wheel. Predefined meshes are available for:
+
+- **Wheel 1 (small)**
+- **Wheel 2 (large)**
+
+When an input displacement field folder is selected, the wheel type is read from the structural simulation and the corresponding BE mesh is selected automatically.
+
+**5 — Custom BE mesh**  
+
+Select **Custom** to use another wheel BE mesh and specify the corresponding `.msh` file.
+
+> [!NOTE]
+> Using a **Custom** BE mesh is an advanced option. Contact the developers for further information on setting up a new mesh.
+
+**6 — Zero-velocity groups**  
+
+Specify physical groups of the BE mesh for which the normal surface velocity is set to zero. Multiple group names can be entered separated by commas.
+
+Leave the field empty if no surface should be excluded from the acoustic radiation.
+
+**7 — Number of workers**  
+
+Unlike the rail and sleepers, the wheel is not divided into substructures. The BE calculations at the different frequencies are instead performed in parallel. The number of frequency calculations performed simultaneously is controlled by the **number of workers**.
+
+Increasing the number of workers can reduce the calculation time, provided that sufficient CPU cores are available.
+
+**8 — Save VTK**  
+
+Select this option to export the interpolated vibration field on the wheel BE mesh in VTK format for visualization (with ParaView for example).
