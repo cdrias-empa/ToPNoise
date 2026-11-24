@@ -223,9 +223,12 @@ Leave the field empty if no surface should be excluded from the acoustic radiati
 
 **7 — Number of workers**  
 
-Unlike the rail and sleepers, the wheel is not divided into substructures. The BE calculations at the different frequencies are instead performed in parallel. The number of frequency calculations performed simultaneously is controlled by the **number of workers**.
+The BE calculations for the wheel are executed in parallel for different frequencies. The number of frequency calculations performed simultaneously is controlled by the **number of workers**.
 
 Increasing the number of workers can reduce the calculation time, provided that sufficient CPU cores are available.
+
+> [!NOTE]
+> It is recommended to use at least **3 to 4 CPU cores per worker** and to choose the number of workers as an **integer divisor of the total number of available CPU cores**.
 
 **8 — Save VTK**  
 
