@@ -39,7 +39,7 @@ The **General** tab defines the output location, receiver positions, computation
 
 **1 — Output folder**  
 
-Select the folder where the BEM results will be stored.
+Select the folder where the BE results will be stored.
 
 **2 — Receiver position**  
 
@@ -49,7 +49,7 @@ Select the receiver positions where the acoustic pressure is calculated. Two pre
 - **M3**: 3 m from the track centreline and 1.2 m above the rail head.
 
 > [!NOTE]
-> For both predefined positions, the receivers are distributed along a line parallel to the track from **−25 m to +25 m**, with a spacing of **0.1 m**. This array of receivers is used later to reconstruct the single-axle pass-by.
+> For both predefined positions, an array of receivers distributed along a line parallel to the track from **−25 m to +25 m**, with a spacing of **0.1 m** is created. These receivers are used later to reconstruct the single-axle pass-by.
 
 Select **Custom** to define other receiver positions.
 
@@ -63,14 +63,17 @@ For custom receivers, select a `.csv` or `.xlsx` file without a header. Each row
 
 **4 — Device Interface**  
 
-Select the computational backend used for the BEM calculation:
+Select the computational backend used for the BE calculation:
 
 - **opencl** (recommended for faster computations);
 - **numba**.
 
 **5 — Force direction**  
 
-Select whether the acoustic response is calculated from the structural response to the **vertical**, **lateral**, or both unit forces. The two directions are calculated separately.
+Select the force directions to be considered in the acoustic calculation: **vertical**, **lateral**, or both. The acoustic response is calculated separately for each direction.
+
+> [!NOTE]
+> Running both directions is necessary for the full rolling noise prediction workflow.
 
 ## 6.3 Track
 
@@ -116,7 +119,7 @@ Select **Custom** to use another rail BEM mesh.
 
 **5 — Custom BE mesh**  
 
-Select **Custom** to use another rail and/or sleeper BEM mesh and specify the corresponding `.msh` file.
+Select **Custom** to use another rail and/or sleeper BE mesh and specify the corresponding `.msh` file.
 
 > [!NOTE]
 > Using a **Custom** BE mesh is an advanced option. Contact the developers for further information on setting up a new mesh.
@@ -132,7 +135,7 @@ For the predefined rail meshes, the value is assigned automatically:
 
 **7 — Number of substructures**  
 
-The number of substructures determines the total length of the rail and sleepers section included in the acoustic calculation. To simulate the acoustic radiation of a given rail and/or sleeper section, a substructuring approach is used. A reference substructure mesh is defined for both the rail and sleepers, as shown below.. This reference substructure is duplicated to the left and right along the longitudinal direction of the track until the required length is reached.
+The number of substructures determines the total length of the rail and sleepers section included in the acoustic calculation. To simulate the acoustic radiation of a given rail and/or sleeper section, a substructuring approach is used. A reference substructure mesh is defined for both the rail and sleepers, as shown below. This reference substructure is duplicated to the left and right along the longitudinal direction of the track until the required length is reached.
 
 <p align="center">
   <img src="images/06-03-bem-60E2-mesh.png" alt="UIC 60E2 rail cell (3.6 meters)" width="48%">
@@ -162,10 +165,10 @@ The BE problem is solved separately for each substructure, allowing the calculat
 
 Specify physical groups of the BE mesh for which the normal surface velocity is set to zero. Multiple group names can be entered separated by commas.
 
-The sleepers are embedded within the ballast and their bottom surface does not radiate. For the predefined sleeper meshes the default group is `bottom`, corresponding to the bottom surface of the sleepers, which is set to zero.
+The sleepers are embedded within the ballast and their bottom surface does not radiate. For the predefined sleeper meshes the default group is `bottom`, corresponding to the bottom surface of the sleepers, for which the velocity field is set to zero.
 
 Leave the field empty if no surface should be excluded from the acoustic radiation.
 
 **10 — Save VTK**  
 
-Select this option to export the interpolated vibration field on the complete BE mesh in VTK format for visualization.
+Select this option to export the interpolated vibration field on the complete BE mesh in VTK format for visualization (open with Paraview for example).
