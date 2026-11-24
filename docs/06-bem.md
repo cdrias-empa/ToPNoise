@@ -279,3 +279,72 @@ If a simulation fails, the remaining queued simulations continue to run.
 **8 — Remove selected**  
 
 Remove the selected simulation from the queue.
+
+## 6.6 Results
+
+The BE results are stored separately for each component, contact condition and force direction.
+
+For a track simulation called `track_acoustic`, the results are organized as:
+
+| Path | Content |
+|---|---|
+| `track_acoustic/<contact condition>/Rail/vertical/` | Rail response for the vertical unit force |
+| `track_acoustic/<contact condition>/Rail/lateral/` | Rail response for the lateral unit force |
+| `track_acoustic/<contact condition>/Sleepers/vertical/` | Sleeper response for the vertical unit force |
+| `track_acoustic/<contact condition>/Sleepers/lateral/` | Sleeper response for the lateral unit force |
+
+where `<contact condition>` corresponds to one of the track contact cases, for example `midSpan_nominal` or `onSleeper_offsetOUT`.
+
+For a wheel simulation called `wheel_acoustic`, the results are organized as:
+
+| Path | Content |
+|---|---|
+| `wheel_acoustic/<contact position>/vertical/` | Wheel response for the vertical unit force |
+| `wheel_acoustic/<contact position>/lateral/` | Wheel response for the lateral unit force |
+
+where `<contact position>` corresponds to `nominal`, `offsetIN` or `offsetOUT`.
+
+For a complete BE calculation, the main files generated for each component and force direction are:
+
+| File | Content |
+|---|---|
+| `bemData_<component>_<direction>.h5` | BE boundary solution and corresponding BE mesh |
+| `acouRes_<component>_<direction>.h5` | Acoustic results at the receiver positions and radiated acoustic quantities |
+| `parameters_<component>_<direction>.json` | Parameters used for the calculation |
+| `log.txt` | Calculation log |
+
+If **Save VTK** is selected, the interpolated vibration field on the BE mesh is additionally exported as:
+
+`<component>_<direction>.vtk`
+
+### Boundary solution
+
+The file `bemData_<component>_<direction>.h5` contains the BE boundary solution. Its main datasets are:
+
+| Dataset | Content |
+|---|---|
+| `frequencies` | Calculated frequencies |
+| `vertices`, `elements` | BE mesh |
+| `nodal_displacement` | Structural displacement field transferred to the BE mesh |
+| `normal_velocity` | Normal surface velocity |
+| `nodal_pressure` | Acoustic pressure on the BE boundary |
+| `element_areas` | Surface element areas |
+| `iterations` | Number of solver iterations |
+| `times` | Calculation time |
+
+This file contains the information required to evaluate the acoustic pressure at other receiver positions without solving the BE boundary problem again.
+
+### Acoustic results
+
+The file `acouRes_<component>_<direction>.h5` contains:
+
+| Dataset | Content |
+|---|---|
+| `frequencies` | Calculated frequencies |
+| `receiver_positions` | Coordinates of the receiver positions |
+| `pressure` | Complex acoustic pressure at each receiver **[Pa/N]** |
+| `power` | Radiated sound power **[W/N²]** |
+| `mean_square_velocity` | Mean square normal surface velocity |
+| `radiation_efficiency` | Radiation efficiency |
+
+When **Use existing BE results** is selected, the existing `bemData` boundary solution is reused and only a new `acouRes_<component>_<direction>.h5` file is generated for the new receiver positions.
