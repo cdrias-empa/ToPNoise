@@ -323,14 +323,14 @@ The file `bemData_<component>_<direction>.h5` contains the BE boundary solution.
 
 | Dataset | Content |
 |---|---|
-| `frequencies` | Calculated frequencies |
+| `frequencies` | Calculated frequencies **[Hz]**|
 | `vertices`, `elements` | BE mesh |
 | `nodal_displacement` | Structural displacement on the BE mesh nodes **[m/N]**|
-| `normal_velocity` | Normal surface velocity on the BE mesh elements **[m/N]**|
-| `nodal_pressure` | Pressure on the BE mesh nodes |
-| `element_areas` | Areas of mesh elements |
+| `normal_velocity` | Normal surface velocity on the BE mesh elements **[ms⁻¹/N]**|
+| `nodal_pressure` | Pressure on the BE mesh nodes **[Pa/N]** |
+| `element_areas` | Areas of mesh elements **[m²]**|
 | `iterations` | Number of solver iterations |
-| `times` | Calculation time |
+| `times` | Calculation time **[s]**|
 
 This file contains the information required to evaluate the acoustic pressure at other receiver positions without solving the first step of the BE problem again.
 
@@ -340,8 +340,8 @@ The file `acouRes_<component>_<direction>.h5` contains:
 
 | Dataset | Content |
 |---|---|
-| `frequencies` | Calculated frequencies |
-| `receiver_positions` | Absolute Cartesian coordinates of the receiver positions |
+| `frequencies` | Calculated frequencies **[Hz]**|
+| `receiver_positions` | Absolute Cartesian coordinates of the receiver positions **[m]**|
 | `pressure` | Complex acoustic pressure at each receiver **[Pa/N]** |
 | `power` | Radiated sound power **[W/N²]** |
 | `mean_square_velocity` | Spatially averaged mean square velocity **[m³s⁻²/N²]** |
