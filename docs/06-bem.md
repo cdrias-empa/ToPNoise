@@ -115,8 +115,6 @@ Select the BE mesh used for the rail and sleepers. Predefined meshes are availab
 
 When an input displacement field folder is selected, the rail and sleeper types are read from the structural simulation and the corresponding BE meshes are selected automatically.
 
-Select **Custom** to use another rail BEM mesh.
-
 **5 — Custom BE mesh**  
 
 Select **Custom** to use another rail and/or sleeper BE mesh and specify the corresponding `.msh` file.
@@ -143,7 +141,7 @@ The number of substructures determines the total length of the rail and sleepers
 </p>
 
 <p align="center">
-  <b>UIC 60E2 rail cell (3.6 meters), left; B91-60E2 sleepers cell (5 sleepers), right.</b>
+  <b>UIC 60E2 rail substructure (3.6 m), left; B91-60E2 sleeper substructure (5 sleepers), right.</b>
 </p>
 
 The surface velocity field obtained from the FE models is projected onto each substructure, and the BE problem is solved separately for each one. The total acoustic pressure at the receiver positions is then obtained by summing the complex pressure contributions from all substructures.
@@ -171,4 +169,4 @@ Leave the field empty if no surface should be excluded from the acoustic radiati
 
 **10 — Save VTK**  
 
-Select this option to export the interpolated vibration field on the complete BE mesh in VTK format for visualization (open with Paraview for example).
+Select this option to export the interpolated vibration field on the complete BE mesh in VTK format for visualization (with ParaView for example).
