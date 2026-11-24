@@ -14,18 +14,14 @@ The main processing workflow is:
    Apply the contact filtered rail and/or wheel roughness spectra.
 
 4. **Pass-by**  
-   The acoustic responses of the different contact positions and axles are combined to calculate the pass-by sound pressure as a function of time and the corresponding third-octave spectra.
+   Construct pass-by signals and spectra for single or multiple train axles.
 
 The main inputs of the module are therefore:
 
-- the **wheel contact FRFs** calculated with the Wheelset FE model;
+- the **wheelset contact FRFs** calculated with the Wheelset FE model;
 - the **track contact FRFs** calculated with the Multi-Sleeper Model;
 - the **acoustic transfer functions** calculated with the BE model;
 - the **rail and/or wheel roughness spectra**.
-
-Only a **vertical roughness excitation** is applied. The lateral contact force results from the coupling between the vertical and lateral wheel–rail dynamics.
-
-For each radiating component, the acoustic responses resulting from the vertical and lateral contact forces are combined using their complex amplitudes and phases. The contributions of the **rail, sleepers and wheel** are subsequently combined energetically.
 
 The graphical interface is divided into four tabs:
 
@@ -33,3 +29,19 @@ The graphical interface is divided into four tabs:
 - **Contact force**
 - **Rolling noise**
 - **Execution**
+
+## 7.2 General
+
+The **General** tab defines the case name and output location for the post-processing results.
+
+![Post-processing — General tab](images/07-01-post-general.png)
+
+**1 — Case name**  
+
+Enter a name for the post-processing case. A folder with this name is created in which the results are stored.
+
+The case name must not contain spaces or path separators.
+
+**2 — Output folder**  
+
+Select the folder where the post-processing results will be stored.
