@@ -233,3 +233,49 @@ Increasing the number of workers can reduce the calculation time, provided that 
 **8 — Save VTK**  
 
 Select this option to export the interpolated vibration field on the wheel BE mesh in VTK format for visualization (with ParaView for example).
+
+## 6.5 Execution
+
+The **Execution** tab defines the components to be calculated and manages the simulation queue.
+
+![BEM — Execution tab](images/06-04-bem-execution.png)
+
+**1–3 — Components**  
+
+Select the components to be included in the calculation:
+
+- **Wheel**
+- **Rail**
+- **Sleepers**
+
+One or more components can be selected simultaneously.
+
+**4 — Progress**  
+
+Displays the progress of the simulation queue and reports when a calculation starts, finishes or fails.
+
+**5 — Simulation queue**  
+
+Shows the simulations added to the queue, including the simulation name, component, contact condition, force direction and current status.
+
+Each combination of **component** and **force direction** is treated as a separate simulation. For example, selecting the rail and sleepers together with both vertical and lateral directions adds four simulations to the queue.
+
+The simulations in the queue are executed sequentially. The parallelization defined through the **number of workers** is applied internally within each individual simulation.
+
+**6 — Add to queue**  
+
+Add the defined simulations to the queue according to the selected components and force directions.
+
+If a simulation with the same name, component, contact condition and force direction is already present in the queue, the user is asked whether it should be replaced.
+
+If results for the same simulation already exist in the output folder, the user is asked whether they can be overwritten.
+
+**7 — Start queue**  
+
+Start the simulations in the queue. The status of each simulation changes from `Queued` to `Running` and then to `Done` or `Failed`.
+
+If a simulation fails, the remaining queued simulations continue to run.
+
+**8 — Remove selected**  
+
+Remove the selected simulation from the queue.
