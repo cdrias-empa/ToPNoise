@@ -7,7 +7,7 @@ The main outputs **per component** are:
 - **Acoustic pressure per unit force** at the defined receiver positions **[Pa/N]**;
 - **Radiated sound power per squared unit force** **[W/N²]**;
 - **Radiation efficiency**;
-- **Boundary solution** on the vibrating surface (**boundary normal velocity** and **pressure**), which can be reused to calculate the acoustic pressure at different receiver positions without repeating the BE solution.
+- **Boundary solution** on the vibrating surface (**boundary normal velocity** and **boundary pressure**), which can be reused to calculate the acoustic pressure at different receiver positions without repeating the BE solution.
 
 ### Assumptions
 
