@@ -344,7 +344,7 @@ The file `acouRes_<component>_<direction>.h5` contains:
 | `receiver_positions` | Absolute Cartesian coordinates of the receiver positions |
 | `pressure` | Complex acoustic pressure at each receiver **[Pa/N]** |
 | `power` | Radiated sound power **[W/N²]** |
-| `mean_square_velocity` | Spatially averaged mean square velocity **[$1\,\mathrm{m^3\,s^{-2}/N^2}$]** |
+| `mean_square_velocity` | Spatially averaged mean square velocity **$1\,\mathrm{m^3\,s^{-2}/N^2}$** |
 | `radiation_efficiency` | Radiation efficiency |
 
 When **Use existing BE results** is selected, the existing `bemData` boundary solution is reused and only a new `acouRes_<component>_<direction>.h5` file is generated for the new receiver positions.
