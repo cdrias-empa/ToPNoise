@@ -19,7 +19,7 @@ The structural vibration field is first transferred from the FE surface mesh to 
 
 Internally, the calculation is therefore carried out in two main steps:
 
-1. calculation of the BEM boundary solution from the structural vibration field;
+1. calculation of the BE boundary solution from the structural vibration field;
 2. calculation of the acoustic field at the selected receiver positions.
 
 If an existing BEM boundary solution is used, only the second step is repeated.
