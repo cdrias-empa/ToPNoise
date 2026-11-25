@@ -96,7 +96,7 @@ where $\mathbf{Y}^{\mathrm{W}}$, $\mathbf{Y}^{\mathrm{R}}$ and $\mathbf{Y}^{\mat
 The wheel and track mobility matrices include the driving-point and cross-mobilities:
 
 ```math
-\mathbf{Y}^{(i)}=
+\mathbf{Y}=
 \begin{bmatrix}
 Y_{yy} & Y_{yz} \\
 Y_{zy} & Y_{zz}
