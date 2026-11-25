@@ -213,6 +213,12 @@ The roughness excitation is applied in the vertical direction only. The lateral 
 
 The contact forces are calculated for unit vertical roughness.
 
+> [!NOTE]
+> **TODO:** The contact forces are calculated for **unit vertical roughness**.
+
+> [!WARNING]
+> **TODO:** Verify the sign convention of the wheel cross-mobilities used in the wheel/track interaction model.
+
 **4 — Train speed**
 
 Define the train speed [km/h].
