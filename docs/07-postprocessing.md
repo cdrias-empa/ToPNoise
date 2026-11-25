@@ -48,7 +48,7 @@ Select the folder where the post-processing results will be stored.
 
 ## 7.3 Contact force
 
-The **Contact force** tab defines the structural response of the wheel and track and the train speed and wheel load used to calculate the wheel–track interaction.
+The **Contact force** tab defines the structural response of the wheel and track, train speed and wheel load to calculate the wheel–track interaction.
 
 ![Post-processing — Contact force tab](images/07-02-post-contactforce.png)
 
