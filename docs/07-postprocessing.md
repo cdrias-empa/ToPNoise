@@ -11,7 +11,7 @@ The main processing workflow is:
    Multiply the vibro-acoustic transfer functions calculated with the BE models by the corresponding contact forces for unit roughness.
 
 3. **Roughness**  
-   Apply the contact filtered rail and/or wheel roughness spectra.
+   Apply the contact filtered combined roughness of the wheel and rail.
 
 4. **Pass-by**  
    Construct pass-by signals and spectra for single or multiple train axles.
