@@ -42,7 +42,7 @@ The dimensions of the contact patch and the contact stiffnesses are calculated u
 
 The interaction model considers two degrees of freedom at the contact point (vertical and lateral). The contact forces are calculated in the frequency domain as:
 
-$$
+```math
 \begin{bmatrix}
 F_y \\
 F_z
@@ -57,7 +57,7 @@ F_z
 i\omega R \\
 0
 \end{bmatrix}
-$$
+```
 
 where $\mathbf{Y}^{\mathrm{W}}$, $\mathbf{Y}^{\mathrm{R}}$ and $\mathbf{Y}^{\mathrm{C}}$ are the mobility matrices of the wheel, track and contact zone, respectively, and $R$ is the roughness amplitude.
 
