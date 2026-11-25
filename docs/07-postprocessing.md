@@ -175,9 +175,9 @@ Select the folder corresponding to the previous post-processing case. The contac
 
 Select this option to calculate the contact forces from the wheelset and track contact FRFs.
 
-The wheel/track interaction model is based on the approach described by Thompson [1]. The wheel and track are coupled through a contact spring and creep forces at the contact.
+The wheel/track interaction model is based on the frequency-domain moving roughness approach developed by Thompson [1]. The wheel and track are coupled through a contact spring and creep forces at the contact.
 
-The interaction model considers two degrees of freedom at the contact point: the vertical direction ($y$) and the lateral direction ($z$). The dynamic contact forces for roughness excitation, which include the vertical and lateral force components Fy and Fz, are calculated in the frequency domain as:
+The interaction model considers two degrees of freedom at the contact point: the vertical direction ($y$) and the lateral direction ($z$). The dynamic contact forces for roughness excitation, which include the vertical and lateral force components $F_y$ and $F_y$, are calculated in the frequency domain as:
 
 ```math
 \begin{bmatrix}
@@ -210,16 +210,16 @@ Y_{zy} & Y_{zz}
 ```
 
 > [!NOTE]
-> **TODO:** The contact forces are calculated for **unit roughness** acting in the vertical direction.
+> The contact forces are calculated for **unit roughness** acting in the vertical direction.
 
 > [!WARNING]
 > **TODO:** Verify the sign convention of the wheel cross-mobilities used in the wheel/track interaction model.
 
 **4 & 5 — Train speed and wheel load**
 
-Define the train speed [km/h] and the static load applied to one wheel [N].
+Define the train speed [km/h] and the static load applied to one wheel [N]. The two parameters are used to calculate the contact zone mobility matrix. 
 
-The wheel load determines the dimensions of the contact patch and the contact stiffnesses. The train speed enters the calculation of the lateral contact mobility.
+The wheel load determines the dimensions of the contact patch and the contact stiffness. The train speed is envolved in the calculation of of the lateral contact mobility.
 
 In the vertical direction, the contact is represented by a linearised Hertzian contact spring. In the lateral direction, the contact is represented by a spring and a creep damper in series, following Thompson [1] and based on Kalker's linear creep theory [2].
 
@@ -239,7 +239,7 @@ where:
 - $a$ and $b$ are the semi-axes of the elliptical contact patch in the rolling and transverse directions, respectively;
 - $G$ is the shear modulus;
 - $v$ is the train speed;
-- $C_{22}^{*}$ is the frequency-dependent lateral creep coefficient.
+- $C_{22}^{*}$ is the frequency-dependent lateral creep coefficient, based on Kalker's linear creep theory [2].
 
 The following assumptions are made in the wheel/track interaction model:
 
