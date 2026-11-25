@@ -177,7 +177,7 @@ Select this option to calculate the contact forces from the wheelset and track c
 
 The wheel/track interaction model is based on the frequency-domain moving roughness approach developed by Thompson [1]. The wheel and track are coupled through a contact spring and creep forces at the contact.
 
-The interaction model considers two degrees of freedom at the contact point: the vertical direction ($y$) and the lateral direction ($z$). The dynamic contact forces for roughness excitation, which include the vertical and lateral force components $F_y$ and $F_y$, are calculated in the frequency domain as:
+The interaction model considers two degrees of freedom at the contact point: the vertical direction ($y$) and the lateral direction ($z$). The dynamic contact forces for roughness excitation, which include the vertical and lateral force components $F_y$ and $F_z$, are calculated in the frequency domain as:
 
 ```math
 \begin{bmatrix}
