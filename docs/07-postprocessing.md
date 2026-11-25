@@ -175,9 +175,9 @@ Select the folder corresponding to the previous post-processing case. The contac
 
 Select this option to calculate the contact forces from the wheelset and track contact FRFs.
 
-The wheel/track interaction model is based on the approach described by Thompson [1]. The wheel and track are coupled through the vertical contact stiffness and the lateral creep forces at the wheel/rail contact point.
+The wheel/track interaction model is based on the approach described by Thompson [1]. The wheel and track are coupled through a contact spring and creep forces at the contact.
 
-The interaction model considers two degrees of freedom at the contact point: the vertical direction ($y$) and the lateral direction ($z$). The contact forces are calculated in the frequency domain as:
+The interaction model considers two degrees of freedom at the contact point: the vertical direction ($y$) and the lateral direction ($z$). The dynamic contact forces for roughness excitation, which include the vertical and lateral force components Fy and Fz, are calculated in the frequency domain as:
 
 ```math
 \begin{bmatrix}
