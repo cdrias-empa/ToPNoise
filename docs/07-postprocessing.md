@@ -209,23 +209,15 @@ Y_{zy} & Y_{zz}
 \qquad i\in\{\mathrm{W},\mathrm{R}\}
 ```
 
-The roughness excitation is applied in the vertical direction only. The lateral contact force results from the coupling between the vertical and lateral dynamics of the wheel and track.
-
-The contact forces are calculated for unit vertical roughness.
-
 > [!NOTE]
-> **TODO:** The contact forces are calculated for **unit vertical roughness**.
+> **TODO:** The contact forces are calculated for **unit roughness** acting in the vertical direction.
 
 > [!WARNING]
 > **TODO:** Verify the sign convention of the wheel cross-mobilities used in the wheel/track interaction model.
 
-**4 — Train speed**
+**4 & 5 — Train speed and wheel load**
 
-Define the train speed [km/h].
-
-**5 — Wheel load**
-
-Define the static load applied to one wheel [N].
+Define the train speed [km/h] and the static load applied to one wheel [N].
 
 The wheel load determines the dimensions of the contact patch and the contact stiffnesses. The train speed enters the calculation of the lateral contact mobility.
 
