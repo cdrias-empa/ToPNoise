@@ -16,6 +16,12 @@ The main processing workflow is:
 4. **Pass-by**  
    Construct pass-by signals and spectra for single or multiple train axles.
 
+### Assumptions
+
+- The effects of wheel rotation on the wheelset dynamics are neglected.
+- Wheel conicity and rail tilt are not accounted for in the contact formulation.
+- Longitudinal and spin creepage are neglected.
+
 The main inputs of the module are therefore:
 
 - the **wheelset contact FRFs** calculated with the Wheelset FE model;
@@ -29,117 +35,6 @@ The graphical interface is divided into four tabs:
 - **Contact force**
 - **Rolling noise**
 - **Execution**
-
-### 7.1.1 Calculation approach and assumptions
-
-**Wheel/track interaction**
-
-The wheel/track interaction model is based on the approach described by Thompson [1]. The wheel and track are coupled through the vertical contact stiffness and the lateral creep forces at the wheel/rail contact point.
-
-In the vertical direction, the contact is represented by a linearised Hertzian contact spring. In the lateral direction, the contact is represented by a spring and a damper in series, accounting for the elastic deformation of the contact zone and the lateral creep forces based on Kalker's theory [2].
-
-The dimensions of the contact patch and the contact stiffnesses are calculated using Hertzian contact theory.
-
-The interaction model considers two degrees of freedom at the contact point (vertical and lateral). The contact forces are calculated in the frequency domain as:
-
-```math
-\begin{bmatrix}
-F_y \\
-F_z
-\end{bmatrix}
-=
-\left[
-\mathbf{Y}^{\mathrm{W}} +
-\mathbf{Y}^{\mathrm{R}} +
-\mathbf{Y}^{\mathrm{C}}
-\right]^{-1}
-\begin{bmatrix}
-i\omega R \\
-0
-\end{bmatrix}
-```
-
-where $\mathbf{Y}^{\mathrm{W}}$, $\mathbf{Y}^{\mathrm{R}}$ and $\mathbf{Y}^{\mathrm{C}}$ are the mobility matrices of the wheel, track and contact zone, respectively, and $R$ is the roughness amplitude.
-
-The roughness excitation is applied in the vertical direction only. The lateral contact force results from the coupling between the vertical and lateral responses of the wheel and track, through the cross-mobility terms.
-
-The following assumptions are made in the interaction model:
-
-- The effects of wheel rotation on the wheelset dynamics are neglected.
-- The influence of wheel conicity on the contact angle and contact geometry is neglected.
-- Longitudinal and spin creepage are neglected.
-- The wheel transverse and rail longitudinal radii of curvature are assumed infinite.
-- The rail transverse radius of curvature is set to 0.3 m.
-- The material properties used for the contact model are fixed at a Young's modulus of 210 GPa and a Poisson's ratio of 0.3.
-
-**Scaling of the acoustic response**
-
-The acoustic transfer functions calculated for vertical and lateral unit forces are multiplied by the corresponding contact forces for unit roughness.
-
-For each component (rail, sleepers and wheel), the resulting sound pressure at the receiver positions is obtained as:
-
-$$
-p_{\mathrm{unit}} =
-p_{\mathrm{vert}}F_{\mathrm{vert}} +
-p_{\mathrm{lat}}F_{\mathrm{lat}}
-$$
-
-The vertical and lateral contributions are summed coherently.
-
-For the sound power calculation, the surface normal velocity and surface pressure fields are scaled and combined in the same way. The sound power is then recalculated from the resulting complex surface fields, accounting for the phase relationship between the two excitation directions.
-
-**Roughness and contact filter**
-
-The roughness wavelengths are converted to frequencies according to:
-
-$$
-f = \frac{v}{\lambda}
-$$
-
-where $v$ is the train speed and $\lambda$ is the roughness wavelength.
-
-The rail and wheel roughness spectra are combined energetically:
-
-$$
-r^2 = r_{\mathrm{rail}}^2 + r_{\mathrm{wheel}}^2
-$$
-
-The finite dimensions of the wheel/rail contact patch reduce the excitation from roughness at short wavelengths. This effect is accounted for using the contact filter described in [1]:
-
-$$
-|H(k)|^2 =
-\left[
-1+\frac{\pi}{4}(ka)^3
-\right]^{-1}
-$$
-
-where $a$ is the semi-axis of the contact patch in the rolling direction and $k=2\pi/\lambda$ is the roughness wavenumber.
-
-The acoustic responses for unit roughness are scaled by the contact-filtered roughness in one-third-octave bands:
-
-$$
-p^2 = p_{\mathrm{unit}}^2 \, r^2 \, |H(k)|^2
-$$
-
-$$
-W = W_{\mathrm{unit}} \, r^2 \, |H(k)|^2
-$$
-
-The acoustic contributions of the rail, sleepers and wheel are summed incoherently.
-
-**Pass-by**
-
-The acoustic responses calculated for the different wheel/rail contact positions are averaged energetically with equal weighting.
-
-The pass-by signal is constructed from the spatial distribution of the sound pressure along the track, accounting for the train speed and the positions of the axles. The contributions of the individual axles are summed incoherently.
-
-The pass-by spectra are calculated over a defined averaging time window. The frequency range considered for the pass-by is 100 Hz to 5000 Hz.
-
-**References**
-
-[1] Thompson, D. J. (2009). Railway Noise and Vibration: Mechanisms, Modelling and Means of Control. Elsevier.
-
-[2] Kalker, J. J. (1967). On the rolling contact of two elastic bodies in the presence of dry friction. Doctoral thesis, Delft University of Technology.
 
 ## 7.2 General
 
@@ -175,7 +70,7 @@ Select the folder corresponding to the previous post-processing case. The contac
 
 Select this option to calculate the contact forces from the wheelset and track contact FRFs.
 
-The wheel/track interaction model is based on the frequency-domain moving roughness approach developed by Thompson [1]. The wheel and track are coupled through a contact spring and creep forces at the contact.
+The wheel/track interaction model is based on the frequency-domain moving roughness approach described by Thompson [1]. The wheel and track are coupled through a contact spring and creep forces at the contact.
 
 The interaction model considers two degrees of freedom at the contact point: the vertical direction ($y$) and the lateral direction ($z$). The dynamic contact forces for roughness excitation, which include the vertical and lateral force components $F_y$ and $F_z$, are calculated in the frequency domain as:
 
@@ -219,9 +114,7 @@ Y_{zy} & Y_{zz}
 
 Define the train speed [km/h] and the static load applied to one wheel [N]. The two parameters are used to calculate the contact zone mobility matrix. 
 
-The wheel load determines the dimensions of the contact patch and the contact stiffness. The train speed is envolved in the calculation of of the lateral contact mobility.
-
-In the vertical direction, the contact is represented by a linearised Hertzian contact spring. In the lateral direction, the contact is represented by a spring and a creep damper in series, following Thompson [1] and based on Kalker's linear creep theory [2].
+The wheel load determines the dimensions of the contact patch and the contact stiffness. The train speed is used in the calculation of the lateral contact mobility.
 
 The contact zone mobility matrix is given by:
 
@@ -239,17 +132,9 @@ where:
 - $a$ and $b$ are the semi-axes of the elliptical contact patch in the rolling and transverse directions, respectively;
 - $G$ is the shear modulus;
 - $v$ is the train speed;
-- $C_{22}^{*}$ is the frequency-dependent lateral creep coefficient, based on Kalker's linear creep theory [2].
+- $C_{22}^{*}$ is the frequency dependent creep coefficient [1].
 
-The following assumptions are made in the wheel/track interaction model:
-
-- The effects of wheel rotation on the wheelset dynamics are neglected.
-- The influence of wheel conicity on the contact angle and geometry is neglected.
-- Longitudinal and spin creepage are neglected.
-- The wheel transverse and rail longitudinal radii of curvature are assumed infinite.
-- The rail transverse radius of curvature is set to 0.3 m.
-- The wheel rolling radius is obtained from the wheelset model.
-- The material properties used for the contact model are fixed at a Young's modulus of 210 GPa and a Poisson's ratio of 0.3.
+The wheel transverse and rail longitudinal radii of curvature are assumed infinite, the rail transverse radius of curvature is set to 0.3 m and the wheel rolling radius is obtained from the wheelset FE model. The material properties used for the contact model are fixed at a Young's modulus of 210 GPa and a Poisson's ratio of 0.3.
 
 **6 — Add**
 
