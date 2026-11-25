@@ -203,8 +203,8 @@ The wheel and track mobility matrices include the driving-point and cross-mobili
 ```math
 \mathbf{Y}^{(i)}=
 \begin{bmatrix}
-Y_{yy}^{(i)} & Y_{yz}^{(i)} \\
-Y_{zy}^{(i)} & Y_{zz}^{(i)}
+Y_{yy} & Y_{yz} \\
+Y_{zy} & Y_{zz}
 \end{bmatrix},
 \qquad i\in\{\mathrm{W},\mathrm{R}\}
 ```
