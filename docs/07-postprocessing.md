@@ -100,8 +100,7 @@ The wheel and track mobility matrices include the driving-point and cross-mobili
 \begin{bmatrix}
 Y_{yy} & Y_{yz} \\
 Y_{zy} & Y_{zz}
-\end{bmatrix},
-\qquad i\in\{\mathrm{W},\mathrm{R}\}
+\end{bmatrix}
 ```
 
 > [!NOTE]
