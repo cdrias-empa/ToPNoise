@@ -195,7 +195,7 @@ p_z^{(i)}F_z
 
 where $p_y^{(i)}$ and $p_z^{(i)}$ are the acoustic transfer functions for vertical and lateral unit forces, respectively, and $i$ denotes the rail, sleepers or wheel.
 
-The vertical and lateral contributions of each component are summed coherently. The resulting pressure spectra are converted to one-third-octave bands and the contributions of the different components are summed incoherently:
+The vertical and lateral contributions of each component are summed **coherently**. The resulting pressure spectra are converted to **one-third-octave bands** and the contributions of the different components are summed **incoherently**:
 
 ```math
 p_{\mathrm{total}}^2 =
