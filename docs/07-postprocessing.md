@@ -244,7 +244,7 @@ The sound power is then calculated from the resulting complex surface fields:
 ```math
 W^{(i)} =
 \frac{1}{2}
-\operatorname{Re}
+\mathrm{Re}
 \left\{
 \int_S
 u_n^{(i)*}p_s^{(i)}
