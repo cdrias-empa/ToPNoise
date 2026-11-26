@@ -100,11 +100,11 @@ Y_{zy} & Y_{zz}
 
 **2 & 3 — Train speed and wheel load**
 
-Define the train speed [km/h] and the static load applied to one wheel [N]. The two parameters are used to calculate the contact zone mobility matrix. 
+Define the train speed [km/h] and the static load applied on one wheel [N]. The two parameters are used to calculate the contact zone mobility matrix. 
 
 The wheel load determines the dimensions of the contact patch and the contact stiffness. The train speed is used in the calculation of the lateral contact mobility.
 
-The contact zone mobility matrix is given by:
+The contact zone mobility matrix is given by [1]:
 
 ```math
 \mathbf{Y}^{\mathrm{C}}(\omega)=
