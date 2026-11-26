@@ -106,9 +106,6 @@ Y_{zy} & Y_{zz}
 > [!NOTE]
 > The contact forces are calculated for **unit roughness** acting in the vertical direction.
 
-> [!WARNING]
-> **TODO:** Verify the sign convention of the wheel cross-mobilities used in the wheel/track interaction model.
-
 **4 & 5 — Train speed and wheel load**
 
 Define the train speed [km/h] and the static load applied to one wheel [N]. The two parameters are used to calculate the contact zone mobility matrix. 
@@ -155,7 +152,7 @@ Select this option to use the contact FRFs calculated with the Wheelset FE and M
 
 **9 — Wheelset folder**
 
-Select the wheelset simulation folder. The available wheel contact positions are detected automatically.
+Select the wheelset simulation results folder. The available wheel contact positions are detected automatically.
 
 - `nominal`
 - `offsetIN`
