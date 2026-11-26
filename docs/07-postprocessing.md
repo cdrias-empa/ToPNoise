@@ -283,7 +283,7 @@ The finite size of the wheel/rail contact patch reduces the excitation from roug
 
 where $a$ is the semi-axis of the contact patch in the rolling direction and $k$ is the roughness wavenumber.
 
-The squared sound pressure and sound power are scaled by the contact filtered combined roughness:
+The squared sound pressure and sound power for unit roughness are multiplied with the contact filtered combined roughness:
 
 ```math
 p^2 = p_{\mathrm{unit}}^2 \, r^2 \, |H(k)|^2
