@@ -22,7 +22,7 @@ The main processing workflow is:
 - Wheel conicity and rail tilt are not accounted for in the contact formulation.
 - Longitudinal and spin creepage are neglected.
 
-The main inputs of the module are therefore:
+The main inputs of the module are:
 
 - the **wheelset contact FRFs** calculated with the Wheelset FE model;
 - the **track contact FRFs** calculated with the Multi-Sleeper Model;
