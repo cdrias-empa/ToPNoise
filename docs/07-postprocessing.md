@@ -160,6 +160,15 @@ All available wheel and track contact conditions are combined. For example, thre
 
 Select this option to provide the wheelset and track contact FRFs manually.
 
+| Input | Required file |
+|---|---|
+| Wheels vertical contact FRF | `wheel_structural/<contact position>/vertical/Outputs/FRFcontact_vert.txt` |
+| Wheels Lateral contact FRF | `wheel_structural/<contact position>/lateral/Outputs/FRFcontact_vert.txt` |
+| Wheels parameters (JSON) | `wheel_structural/<contact position>/lateral/parameters.json` |
+| Track vertical contact FRF | `track_structural/<contact position>/vert/Outputs/FRF.txt` |
+| Track lateral contact FRF | `track_structural/<contact position>/lat/Outputs/FRF.txt` |
+| Track parameters (JSON) | `track_structural/<contact position>/lat/parameters.json` |
+
 **12 — Contact FRF files**
 
 Select the vertical and lateral contact FRF files and the corresponding parameter file (JSON) for both the wheelset and track.
