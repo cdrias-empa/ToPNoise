@@ -110,7 +110,7 @@ The contact zone mobility matrix is given by [1]:
 \mathbf{Y}^{\mathrm{C}}(\omega)=
 \begin{bmatrix}
 \dfrac{i\omega}{K_H} & 0 \\[8pt]
-0 & \dfrac{v}{G a b C_{22}^{*}(\omega)}
+0 & \dfrac{v}{G a b C_{22}^{*}}
 \end{bmatrix}
 ```
 
