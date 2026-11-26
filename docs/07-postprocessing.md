@@ -242,14 +242,7 @@ p_{s,z}^{(i)}F_z
 The sound power is then calculated from the resulting complex surface fields:
 
 ```math
-W^{(i)} =
-\frac{1}{2}
-\mathrm{Re}
-\left\{
-\int_S
-u_n^{(i)*}p_s^{(i)}
-\,\mathrm{d}S
-\right\}
+W^{(i)} = \frac{1}{2}\mathrm{Re}\Big( \int_S p_s^{(i)}\,u_n^{(i)*}\,\mathrm{d}S \Big)
 ```
 
 where $S$ is the radiating surface and $(\cdot)^*$ denotes the complex conjugate.
