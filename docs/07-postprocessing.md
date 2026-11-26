@@ -266,15 +266,13 @@ r^2 = r_{\mathrm{wheel}}^2 + r_{\mathrm{rail}}^2
 
 where $r_{\mathrm{wheel}}$ and $r_{\mathrm{rail}}$ are the wheel and rail roughness amplitudes, respectively.
 
-The roughness wavelengths are converted to frequencies according to:
+The roughness wavelengths $\lambda$ are converted to frequencies from the train speed $v$:
 
 ```math
 f = \frac{v}{\lambda}
 ```
 
-where $v$ is the train speed and $\lambda$ is the roughness wavelength.
-
-The finite size of the wheel/rail contact patch reduces the excitation from roughness at short wavelengths. This effect is accounted for using the following analytical contact filter [1]:
+The finite size of the wheel/rail contact patch reduces the excitation from roughness at short wavelengths (low-pass filter). This effect is accounted for using the following analytical contact filter [1]:
 
 ```math
 |H(k)|^2 =
