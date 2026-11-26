@@ -332,6 +332,26 @@ where $N_c$ is the number of contact conditions included in the pass-by calculat
 
 Only contact conditions for which the acoustic responses of all detected components are available are included in the averaging.
 
+The pass-by is reconstructed from the acoustic responses calculated at the 501 receivers distributed along the track, from −25 m to +25 m with a spacing of 0.1 m. At each receiver, the sound pressure spectrum is available in one-third-octave bands.
+
+The overall sound pressure level as a function of the longitudinal distance is obtained by summing the squared sound pressures over the frequency bands:
+
+```math
+L_p(x)=10\log_{10}\left(
+\frac{\sum_j p_j^2(x)}{p_0^2}
+\right)
+```
+
+where $p_j(x)$ is the sound pressure in the frequency band $j$ at the longitudinal position $x$ and $p_0$ is the reference sound pressure (20 µPa).
+
+Knowing the train speed, the distance between two consecutive receivers can be converted to a time step:
+
+```math
+\Delta t=\frac{\Delta x}{v}
+```
+
+This allows the reconstruction of the pass-by signal at a fixed receiver position.
+
 The pass-by calculation is performed separately for each combination of train speed and wheel load. Pass-by signals and spectra are calculated for unit roughness and, if available, for the applied roughness.
 
 The frequency range considered in the pass-by calculation is 100 Hz to 5000 Hz.
@@ -346,13 +366,30 @@ The frequency range considered in the pass-by calculation is 100 Hz to 5000 Hz.
 
 Define the time window [s] over which the pass-by spectra are averaged.
 
-The averaging time window corresponds to a spatial averaging window of length:
+Knowing the train speed, the averaging time window $T$ is converted to a spatial averaging window of length $L$:
 
 ```math
-L = v T
+L=vT
 ```
 
-where $v$ is the train speed and $T$ is the averaging time window.
+The pass-by spectra are obtained by averaging the squared sound pressure in each frequency band over the spatial window:
+
+```math
+p_{j,\mathrm{eq}}^2=
+\frac{1}{L}\int_{-L/2}^{L/2}p_j^2(x)\,\mathrm{d}x
+```
+
+This is equivalent to a temporal average of the squared sound pressure over the defined time window.
+
+The overall equivalent sound pressure level is obtained by summing the contributions of all frequency bands:
+
+```math
+L_{\mathrm{eq}}=10\log_{10}\left(
+\frac{\sum_j p_{j,\mathrm{eq}}^2}{p_0^2}
+\right)
+```
+
+If A-weighting is applied, the corresponding overall level is $L_{\mathrm{A,eq}}$.
 
 The averaging window is centred on the passage of the midpoint between the first and last axles at the receiver position.
 
