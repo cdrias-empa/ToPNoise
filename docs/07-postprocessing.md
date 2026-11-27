@@ -207,11 +207,10 @@ p_{\mathrm{wheel}}^2
 
 **3 — Use existing scaled acoustic response**
 
-Select this option to reuse the acoustic responses calculated in a previous post-processing case.
+Select this option to reuse the acoustic responses calculated in a previous post-processing case. Select its corresponding post-processing results folder.
 
-Select the corresponding post-processing results folder.
-
-If the selected case contains only the acoustic responses for unit roughness, the roughness can be applied and the pass-by can be calculated. If the roughness has already been applied, only the pass-by calculation is available.
+> [!NOTE]
+> If the selected case contains only the acoustic responses for unit roughness, the roughness can be applied and the pass-by can be calculated. If the roughness has already been applied, only the pass-by calculation is available.
 
 **4 — Detected acoustic cases**
 
