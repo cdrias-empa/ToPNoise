@@ -213,7 +213,7 @@ The acoustic transfer functions are associated with the corresponding wheel and 
 
 **3 — Calculate power**
 
-Select this option to calculate the radiated sound power of each rail, sleepers and wheel.
+Select this option to calculate the radiated sound power of the rail, sleepers and wheel.
 
 The surface normal velocity and surface pressure calculated for vertical and lateral unit forces are multiplied by the corresponding contact forces:
 
