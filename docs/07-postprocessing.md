@@ -193,7 +193,7 @@ p_zF_z
 
 where $p_y$ and $p_z$ are the acoustic transfer functions for vertical and lateral unit forces, respectively.
 
-The vertical and lateral contributions of each component are summed **coherently**. The resulting pressure spectra are converted to **one-third-octave bands** and the contributions of the different components are summed **incoherently**:
+The resulting pressure spectra are converted to **one-third-octave bands** and the contributions of the different components are summed **incoherently**:
 
 ```math
 p_{\mathrm{total}}^2 =
@@ -203,7 +203,7 @@ p_{\mathrm{wheel}}^2
 ```
 
 > [!NOTE]
-> The acoustic response can be calculated for individual components. It is not necessary to provide the acoustic transfer functions of all three components.
+> The total final
 
 **2 — Detected acoustic cases**
 
